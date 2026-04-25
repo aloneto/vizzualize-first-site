@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="CFTV">
+  <!-- Camera body -->
+  <rect x="2" y="7" width="13" height="10" rx="2"/>
+  <!-- Camera lens -->
+  <circle cx="8.5" cy="12" r="2.5"/>
+  <!-- Play/record indicator -->
+  <circle cx="8.5" cy="12" r="1"/>
+  <!-- Video arm -->
+  <polyline points="15 9 22 6 22 18 15 15"/>
+  <!-- Status light -->
+  <circle cx="5" cy="9.5" r="1" fill="currentColor" stroke="none"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 28" fill="none" aria-label="esi|agro">
+  <text x="0" y="20" font-family="Sora, system-ui, sans-serif" font-weight="700" font-size="16" fill="#FFFFFF" letter-spacing="-0.3">esi</text>
+  <rect x="30" y="4" width="2" height="20" fill="#2D8B4E" rx="1"/>
+  <text x="37" y="20" font-family="Sora, system-ui, sans-serif" font-weight="300" font-size="16" fill="#2D8B4E" letter-spacing="0.5">agro</text>
+</svg>
