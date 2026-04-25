@@ -1,13 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* ESI Exata Brand Colors */
-  --color-ink: #0d1117;
+  /* === ESI Exata — paleta oficial =================================== */
+  --color-ink: #0B1540;
+  --color-ink-deep: #070E2A;
   --color-red: #E21219;
   --color-tech: #1FA9E6;
-  --color-agro: #2D8B4E;
-  --color-pd: #6B4BD9;
-  --color-store: #E85D24;
+  --color-cream: #f5f2ec;
+  --color-paper: #ffffff;
+  --color-mute: #6b7590;
+  --color-line: #e4e6ed;
+
+  /* === Marcas do grupo ============================================== */
+  --color-agro: #3b8a47;
+  --color-pd: #6b4bd9;
+  --color-store: #d97423;
 
   /* Neutrals */
   --color-white: #ffffff;

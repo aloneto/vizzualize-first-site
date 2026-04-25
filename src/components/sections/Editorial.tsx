@@ -14,12 +14,12 @@ type EditorialProps = {
 };
 
 const defaultGradients = [
-  "from-[#0d1117] to-[#1a1f2e]",
-  "from-[#0a1628] to-[#0d1117]",
-  "from-[#0f1923] to-[#0d1117]",
-  "from-[#130d1a] to-[#0d1117]",
-  "from-[#0d1a13] to-[#0d1117]",
-  "from-[#1a0d0d] to-[#0d1117]",
+  "from-[#0B1540] to-[#1a1f3e]",
+  "from-[#0a1628] to-[#0B1540]",
+  "from-[#0f1933] to-[#0B1540]",
+  "from-[#130d2a] to-[#0B1540]",
+  "from-[#0d2a13] to-[#0B1540]",
+  "from-[#2a0d0d] to-[#0B1540]",
 ];
 
 export function Editorial({ kicker, heading, items = [] }: EditorialProps) {
