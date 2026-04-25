@@ -232,6 +232,7 @@ export default function Home() {
             title: "Planta industrial elimina falsos alarmes com detecção de gás inteligente",
             excerpt:
               "Substituição de sistema legado por solução integrada com sensores multi-gás e IA de filtragem. Conformidade NR-20 atingida no prazo.",
+            imageSrc: "/images/cases/gas-detection.jpg",
             sector: "Energia",
             sectorColor: "var(--color-store)",
             kpis: [
