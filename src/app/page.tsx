@@ -39,7 +39,18 @@ export default function Home() {
       />
 
       {/* 3. ClientBar — Clientes */}
-      <ClientBar heading="EMPRESAS QUE CONFIAM NA ESI EXATA" clients={[]} />
+      <ClientBar
+        heading="EMPRESAS QUE CONFIAM NA ESI EXATA"
+        clients={[
+          { name: "Riachuelo", logoSrc: "/logos/clients/riachuelo.svg" },
+          { name: "Supermercado Supremo", logoSrc: "/logos/clients/supremo.jpg" },
+          { name: "Carrefour", logoSrc: "/logos/clients/carrefour.jpg" },
+          { name: "Cargill", logoSrc: "/logos/clients/cargill.jpg" },
+          { name: "Telhanorte", logoSrc: "/logos/clients/telhanorte.jpg" },
+          { name: "Madrin", logoSrc: "/logos/clients/madrin.png" },
+          { name: "Armond", logoSrc: "/logos/clients/armond.png" },
+        ]}
+      />
 
       {/* 4. Editorial — Grid Instagram-style */}
       <Editorial
