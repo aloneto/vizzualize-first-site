@@ -19,17 +19,17 @@ const footerLinks = {
     { label: "Healthcare", href: "#setores" },
   ],
   Empresa: [
-    { label: "Sobre a ESI Exata", href: "#" },
+    { label: "Sobre a ESI Exata", href: "#contato" },
     { label: "Cases", href: "#cases" },
     { label: "P&D", href: "#pd" },
-    { label: "ESI Store", href: "#" },
+    { label: "ESI Store", href: "#store" },
   ],
   Contato: [
     { label: "contato@esiexata.com.br", href: "mailto:contato@esiexata.com.br" },
     { label: "(41) 3527 7007", href: "tel:+554135277007" },
-    { label: "R. Jorge B. Crocetti, 231\nCuritiba – PR", href: "#" },
+    { label: "R. Jorge B. Crocetti, 231\nCuritiba – PR", href: null },
   ],
-};
+} as const satisfies Record<string, { label: string; href: string | null }[]>;
 
 type FooterProps = {
   siteName?: string;
@@ -67,12 +67,18 @@ export function Footer({ siteName = "ESI Exata" }: FooterProps) {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-xs text-[var(--color-gray-400)] hover:text-white transition-colors leading-relaxed whitespace-pre-line"
-                    >
-                      {link.label}
-                    </Link>
+                    {link.href !== null ? (
+                      <Link
+                        href={link.href}
+                        className="text-xs text-[var(--color-gray-400)] hover:text-white transition-colors leading-relaxed whitespace-pre-line"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <span className="text-xs text-[var(--color-gray-400)] leading-relaxed whitespace-pre-line">
+                        {link.label}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -86,12 +92,12 @@ export function Footer({ siteName = "ESI Exata" }: FooterProps) {
             © {year} {siteName}. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-xs text-[var(--color-gray-600)] hover:text-[var(--color-gray-400)] transition-colors">
+            <span className="text-xs text-[var(--color-gray-600)]">
               Política de Privacidade
-            </Link>
-            <Link href="#" className="text-xs text-[var(--color-gray-600)] hover:text-[var(--color-gray-400)] transition-colors">
+            </span>
+            <span className="text-xs text-[var(--color-gray-600)]">
               Termos de Uso
-            </Link>
+            </span>
           </div>
         </div>
       </Container>

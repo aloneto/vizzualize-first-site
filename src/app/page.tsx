@@ -16,9 +16,8 @@ export default function Home() {
       <Nav
         subBrands={[
           { name: "ESI Exata", href: "/", logoSrc: "/logos/sub-brand-esi-exata.svg" },
-          { name: "ESI Agro", href: "#", logoSrc: "/logos/sub-brand-esi-agro.svg" },
           { name: "ESI P&D", href: "#pd", logoSrc: "/logos/sub-brand-esi-pd.svg" },
-          { name: "ESI Store", href: "#", logoSrc: "/logos/sub-brand-esi-store.svg" },
+          { name: "ESI Store", href: "#store", logoSrc: "/logos/sub-brand-esi-store.svg" },
         ]}
       />
 
