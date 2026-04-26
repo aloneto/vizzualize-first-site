@@ -6,6 +6,7 @@ type Sector = {
   name: string;
   description: string;
   iconSrc: string;
+  photoSrc?: string;
   color: string;
   href?: string;
   cta?: string;
@@ -16,6 +17,7 @@ type FeaturedSector = {
   kicker?: string;
   description: string;
   iconSrc: string;
+  photoSrc?: string;
   color: string;
   href?: string;
   cta?: string;
@@ -46,8 +48,15 @@ export function Sectors({ kicker, heading, subheading, featured, items = [] }: S
         )}
 
         {featured && (
-          <div className="mb-8 rounded-2xl overflow-hidden bg-[var(--color-gray-900)] border border-[var(--color-gray-800)] hover:border-[var(--color-gray-700)] transition-colors">
-            <div className="p-8 lg:p-12 flex flex-col sm:flex-row sm:items-start gap-8">
+          <div className="mb-8 rounded-2xl overflow-hidden bg-[var(--color-gray-900)] border border-[var(--color-gray-800)] hover:border-[var(--color-gray-700)] transition-colors relative">
+            {featured.photoSrc && (
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-15"
+                style={{ backgroundImage: `url(${featured.photoSrc})` }}
+                aria-hidden="true"
+              />
+            )}
+            <div className="relative p-8 lg:p-12 flex flex-col sm:flex-row sm:items-start gap-8">
               <div className="shrink-0">
                 <div
                   className="w-16 h-16 rounded-xl flex items-center justify-center"
@@ -92,8 +101,16 @@ export function Sectors({ kicker, heading, subheading, featured, items = [] }: S
           {items.map((sector) => (
             <div
               key={sector.name}
-              className="rounded-xl bg-[var(--color-gray-900)] border border-[var(--color-gray-800)] p-6 hover:border-[var(--color-gray-600)] transition-colors group"
+              className="rounded-xl bg-[var(--color-gray-900)] border border-[var(--color-gray-800)] p-6 hover:border-[var(--color-gray-600)] transition-colors group relative overflow-hidden"
             >
+              {sector.photoSrc && (
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-15"
+                  style={{ backgroundImage: `url(${sector.photoSrc})` }}
+                  aria-hidden="true"
+                />
+              )}
+              <div className="relative">
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
                 style={{ background: `${sector.color}15`, border: `1px solid ${sector.color}25` }}
@@ -125,6 +142,7 @@ export function Sectors({ kicker, heading, subheading, featured, items = [] }: S
                   {sector.cta}
                 </Link>
               )}
+              </div>
             </div>
           ))}
         </div>

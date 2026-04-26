@@ -16,6 +16,7 @@ type HeroProps = {
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   stats?: Stat[];
+  imageSrc?: string;
 };
 
 export function Hero({
@@ -27,12 +28,22 @@ export function Hero({
   secondaryCtaText,
   secondaryCtaLink,
   stats = [],
+  imageSrc,
 }: HeroProps) {
   return (
     <section
       className="relative min-h-[88vh] flex items-center bg-[var(--color-ink)] text-white overflow-hidden"
       aria-label="Hero"
     >
+      {/* Hero background photo */}
+      {imageSrc && (
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${imageSrc})` }}
+          aria-hidden="true"
+        />
+      )}
+
       {/* Circuit pattern background */}
       <div
         className="absolute inset-0 opacity-[0.07]"

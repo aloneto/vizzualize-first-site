@@ -30,6 +30,7 @@ export default function Home() {
         ctaLink="#solucoes"
         secondaryCtaText="Fale com um especialista"
         secondaryCtaLink="#contato"
+        imageSrc="/photos/hero.jpg"
         stats={[
           { value: "20", label: "anos de mercado" },
           { value: "+500", label: "projetos entregues" },
@@ -58,15 +59,21 @@ export default function Home() {
         heading="Tecnologia que opera onde outros não chegam."
         items={[
           {
+            imageSrc: "/photos/editorial-comunicacao-campo.jpg",
             quote: "Não vendemos câmeras. Entregamos controle.",
+            attribution: "Comunicação em Campo",
             accentColor: "var(--color-red)",
           },
           {
+            imageSrc: "/photos/editorial-monitoramento.jpg",
             quote: "Da portaria ao back office — visibilidade total da operação.",
+            attribution: "Monitoramento de Infraestrutura",
             accentColor: "var(--color-tech)",
           },
           {
+            imageSrc: "/photos/editorial-instalacao-altura.jpg",
             quote: "IA que aprende, alerta e age.",
+            attribution: "Instalação em Altura",
             accentColor: "var(--color-pd)",
           },
           {
@@ -95,6 +102,7 @@ export default function Home() {
           description:
             "Monitoramento comportamental, prevenção de perdas e inteligência de piso de loja. Proteja margens, reduza furtos e ganhe visibilidade sobre cada ponto da operação — da entrada ao caixa.",
           iconSrc: "/icons/sectors/icon-varejo.svg",
+          photoSrc: "/photos/varejo.jpg",
           color: "var(--color-red)",
           href: "#contato",
           cta: "Ver soluções para varejo →",
@@ -105,6 +113,7 @@ export default function Home() {
             description:
               "Segurança perimetral, controle de acesso e comunicação crítica para ambientes portuários. Operações 24/7 com confiabilidade de nível industrial.",
             iconSrc: "/icons/sectors/icon-portos.svg",
+            photoSrc: "/photos/portos.jpg",
             color: "var(--color-tech)",
             href: "#contato",
             cta: "Saiba mais →",
@@ -114,6 +123,7 @@ export default function Home() {
             description:
               "Detecção de gás, monitoramento de ativos e comunicação de missão crítica para plantas industriais e distribuidoras. Conformidade com NR e proteção integral de ativos.",
             iconSrc: "/icons/sectors/icon-energia.svg",
+            photoSrc: "/photos/energia.jpg",
             color: "var(--color-store)",
             href: "#contato",
             cta: "Saiba mais →",
@@ -123,6 +133,7 @@ export default function Home() {
             description:
               "Rastreabilidade, segurança de perímetro e monitoramento de operações em grandes extensões. Tecnologia pensada para o campo — robusta, confiável e de longo alcance.",
             iconSrc: "/icons/sectors/icon-agro.svg",
+            photoSrc: "/photos/agro.jpg",
             color: "var(--color-agro)",
             href: "#contato",
             cta: "Saiba mais →",
@@ -132,6 +143,7 @@ export default function Home() {
             description:
               "Proteção de patrimônio, controle de acesso e segurança de pacientes em ambientes hospitalares e clínicas. Conformidade com normas sanitárias e operação contínua.",
             iconSrc: "/icons/sectors/icon-healthcare.svg",
+            photoSrc: "/photos/healthcare.jpg",
             color: "var(--color-pd)",
             href: "#contato",
             cta: "Saiba mais →",
@@ -210,6 +222,7 @@ export default function Home() {
             title: "Rede varejista reduz perdas com monitoramento comportamental",
             excerpt:
               "Implementação de CFTV com IA em lojas distribuídas pelo país. Correlação de eventos com ERP e alertas comportamentais em tempo real.",
+            imageSrc: "/photos/case-varejo.jpg",
             sector: "Varejo",
             sectorColor: "var(--color-red)",
             kpis: [
@@ -221,6 +234,7 @@ export default function Home() {
             title: "Porto amplia cobertura de segurança com rádio digital",
             excerpt:
               "Upgrade de comunicação analógica para DMR com cobertura integral do pátio e píer. Eliminação de pontos cegos e redução do tempo de resposta a incidentes.",
+            imageSrc: "/photos/case-porto.jpg",
             sector: "Portos",
             sectorColor: "var(--color-tech)",
             kpis: [
@@ -232,7 +246,7 @@ export default function Home() {
             title: "Planta industrial elimina falsos alarmes com detecção de gás inteligente",
             excerpt:
               "Substituição de sistema legado por solução integrada com sensores multi-gás e IA de filtragem. Conformidade NR-20 atingida no prazo.",
-            imageSrc: "/images/cases/gas-detection.jpg",
+            imageSrc: "/photos/case-energia.jpg",
             sector: "Energia",
             sectorColor: "var(--color-store)",
             kpis: [
