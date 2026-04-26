@@ -15,138 +15,111 @@ export default function Home() {
       {/* 1. Nav — Sub-brands bar */}
       <Nav
         subBrands={[
-          { name: "ESI Exata", href: "/", logoSrc: "/logos/sub-brand-esi-exata.svg" },
-          { name: "ESI P&D", href: "#pd", logoSrc: "/logos/sub-brand-esi-pd.svg" },
-          { name: "ESI Store", href: "#store", logoSrc: "/logos/sub-brand-esi-store.svg" },
+          { id: "exata", label: "esi|exata", color: "var(--color-red)" },
+          { id: "agro",  label: "esi|agro",  color: "var(--color-agro)" },
+          { id: "pd",    label: "esi|p&d",   color: "var(--color-pd)" },
+          { id: "store", label: "esi|store", color: "var(--color-store)" },
         ]}
       />
 
       {/* 2. Hero — Headline, stats, CTAs */}
       <Hero
-        kicker="TECNOLOGIA APLICADA À SEGURANÇA"
-        heading="Precisão onde o risco não tem margem para erro."
-        subheading="20 anos integrando hardware, software e inteligência artificial para eliminar perdas e proteger operações nos setores mais exigentes do Brasil."
-        ctaText="Conheça nossas soluções"
-        ctaLink="#solucoes"
-        secondaryCtaText="Fale com um especialista"
-        secondaryCtaLink="#contato"
-        imageSrc="/photos/hero.jpg"
+        badge="Carrefour · Atacadão · Assaí · Porto de Santos · Porto de Chibatão · Edge Gas · IMPASA · ILS Agro"
+        heading="Segurança evita problemas antes deles acontecerem."
+        highlightWord="antes"
+        subheading="A engenharia de imagem, comunicação crítica e prevenção de perdas por trás das maiores operações de varejo, porto, energia e agro do Brasil. Há 22 anos."
+        ctaPrimary="Quero um diagnóstico"
+        ctaPrimaryLink="#contato"
+        ctaSecondary="Comprar na ESI Store"
+        ctaSecondaryLink="#store"
         stats={[
-          { value: "20", label: "anos de mercado" },
-          { value: "+500", label: "projetos entregues" },
-          { value: "15+", label: "estados atendidos" },
-          { value: "5", label: "setores de atuação" },
+          { value: "22", suffix: "+", label: "anos de operação", sub: "Desde 2003" },
+          { value: "3", label: "grandes redes de varejo", sub: "Carrefour · Atacadão · Assaí" },
+          { value: "2", label: "portos atendidos", sub: "Santos · Chibatão" },
+          { value: "2", label: "unidades", sub: "Curitiba PR · Sinop MT" },
         ]}
       />
 
-      {/* 3. ClientBar — Clientes */}
+      {/* 3. ClientBar — Clientes reais */}
       <ClientBar
         heading="EMPRESAS QUE CONFIAM NA ESI EXATA"
         clients={[
-          { name: "Riachuelo", logoSrc: "/logos/clients/riachuelo.svg" },
-          { name: "Supermercado Supremo", logoSrc: "/logos/clients/supremo.jpg" },
-          { name: "Carrefour", logoSrc: "/logos/clients/carrefour.jpg" },
-          { name: "Cargill", logoSrc: "/logos/clients/cargill.jpg" },
-          { name: "Telhanorte", logoSrc: "/logos/clients/telhanorte.jpg" },
-          { name: "Madrin", logoSrc: "/logos/clients/madrin.png" },
-          { name: "Armond", logoSrc: "/logos/clients/armond.png" },
+          { name: "Carrefour",          sector: "Varejo" },
+          { name: "Atacadão",           sector: "Varejo" },
+          { name: "Assaí",              sector: "Varejo" },
+          { name: "Porto de Santos",    sector: "Portuário" },
+          { name: "Porto de Chibatão",  sector: "Portuário" },
+          { name: "Edge Gas",           sector: "Energia" },
+          { name: "IMPASA",             sector: "Agronegócio" },
+          { name: "ILS Agro",           sector: "Agronegócio" },
         ]}
       />
 
-      {/* 4. Editorial — Grid Instagram-style */}
+      {/* 4. Editorial — Frases do Instagram @esi_exata */}
       <Editorial
-        kicker="ESI EXATA EM CAMPO"
+        kicker="@ESI_EXATA"
         heading="Tecnologia que opera onde outros não chegam."
         items={[
-          {
-            imageSrc: "/photos/editorial-comunicacao-campo.jpg",
-            quote: "Não vendemos câmeras. Entregamos controle.",
-            attribution: "Comunicação em Campo",
-            accentColor: "var(--color-red)",
-          },
-          {
-            imageSrc: "/photos/editorial-monitoramento.jpg",
-            quote: "Da portaria ao back office — visibilidade total da operação.",
-            attribution: "Monitoramento de Infraestrutura",
-            accentColor: "var(--color-tech)",
-          },
-          {
-            imageSrc: "/photos/editorial-instalacao-altura.jpg",
-            quote: "IA que aprende, alerta e age.",
-            attribution: "Instalação em Altura",
-            accentColor: "var(--color-pd)",
-          },
-          {
-            quote: "20 anos. Cada projeto sob medida.",
-            accentColor: "var(--color-red)",
-          },
-          {
-            quote: "Prevenção de perdas não é custo. É estratégia.",
-            accentColor: "var(--color-agro)",
-          },
-          {
-            quote: "Do porto ao ponto de venda — mesma excelência.",
-            accentColor: "var(--color-tech)",
-          },
+          { quote: "Segurança evita problemas antes deles acontecerem.", accentColor: "var(--color-red)" },
+          { quote: "Prevenir é melhor que remediar.", accentColor: "var(--color-tech)" },
+          { quote: "Não é luxo. É proteção.", accentColor: "var(--color-pd)" },
+          { quote: "Incidentes mancham reputações.", accentColor: "var(--color-red)" },
+          { quote: "Segurança inteligente age antes.", accentColor: "var(--color-agro)" },
+          { quote: "Veja tudo. Controle tudo.", accentColor: "var(--color-tech)" },
         ]}
       />
 
-      {/* 5. Sectors — Featured + grid */}
+      {/* 5. Sectors — 5 itens, Varejo featured */}
       <Sectors
         kicker="SETORES"
         heading="Soluções específicas para os desafios de cada setor."
         subheading="Cada mercado tem sua complexidade. Nossos sistemas foram desenvolvidos para cada realidade operacional."
-        featured={{
-          name: "Varejo",
-          kicker: "SETOR EM DESTAQUE",
-          description:
-            "Monitoramento comportamental, prevenção de perdas e inteligência de piso de loja. Proteja margens, reduza furtos e ganhe visibilidade sobre cada ponto da operação — da entrada ao caixa.",
-          iconSrc: "/icons/sectors/icon-varejo.svg",
-          photoSrc: "/photos/varejo.jpg",
-          color: "var(--color-red)",
-          href: "#contato",
-          cta: "Ver soluções para varejo →",
-        }}
         items={[
           {
-            name: "Portos",
-            description:
-              "Segurança perimetral, controle de acesso e comunicação crítica para ambientes portuários. Operações 24/7 com confiabilidade de nível industrial.",
-            iconSrc: "/icons/sectors/icon-portos.svg",
-            photoSrc: "/photos/portos.jpg",
-            color: "var(--color-tech)",
-            href: "#contato",
-            cta: "Saiba mais →",
+            id: "varejo",
+            featured: true,
+            name: "Varejo",
+            kicker: "Eixo principal · Grandes redes",
+            headline: "Prevenção de perdas em escala nacional.",
+            desc: "CFTV integrado com analítico, controle de acesso e rádio digital em centenas de lojas. Operação padronizada, centralizada e auditável — do hipermercado ao centro de distribuição.",
+            clients: ["Carrefour", "Atacadão", "Assaí"],
+            image: "/photos/varejo.jpg",
           },
           {
-            name: "Energia",
-            description:
-              "Detecção de gás, monitoramento de ativos e comunicação de missão crítica para plantas industriais e distribuidoras. Conformidade com NR e proteção integral de ativos.",
-            iconSrc: "/icons/sectors/icon-energia.svg",
-            photoSrc: "/photos/energia.jpg",
-            color: "var(--color-store)",
-            href: "#contato",
-            cta: "Saiba mais →",
+            id: "porto",
+            name: "Portuário",
+            kicker: "Ambientes de missão crítica",
+            headline: "Quando parar não é opção.",
+            desc: "Imagem em ambiente salino, controle de pátio e rádio digital para os principais portos do Brasil. Operação ininterrupta certificada, cobertura 24/7.",
+            clients: ["Porto de Santos", "Porto de Chibatão"],
+            image: "/photos/porto.jpg",
           },
           {
+            id: "energia",
+            name: "Energia & Gás",
+            kicker: "Detecção precoce",
+            headline: "Ver o invisível antes que ele vaze.",
+            desc: "Câmeras de detecção óptica de gás (OGI), perimetragem e rádio intrinsecamente seguro para distribuição de GLP e ambientes classificados.",
+            clients: ["Edge Gas"],
+            image: "/photos/energia.jpg",
+          },
+          {
+            id: "agro",
             name: "Agronegócio",
-            description:
-              "Rastreabilidade, segurança de perímetro e monitoramento de operações em grandes extensões. Tecnologia pensada para o campo — robusta, confiável e de longo alcance.",
-            iconSrc: "/icons/sectors/icon-agro.svg",
-            photoSrc: "/photos/agro.jpg",
-            color: "var(--color-agro)",
-            href: "#contato",
-            cta: "Saiba mais →",
+            kicker: "Filial ESI Agro · Sinop MT",
+            headline: "Engenharia no coração do campo.",
+            desc: "Rádio de longo alcance para safra, vigilância de silos e cerealistas, IA embarcada em áreas abertas. Time dedicado instalado em Sinop.",
+            clients: ["IMPASA", "ILS Agro"],
+            image: "/photos/agro.jpg",
           },
           {
+            id: "healthcare",
             name: "Healthcare",
-            description:
-              "Proteção de patrimônio, controle de acesso e segurança de pacientes em ambientes hospitalares e clínicas. Conformidade com normas sanitárias e operação contínua.",
-            iconSrc: "/icons/sectors/icon-healthcare.svg",
-            photoSrc: "/photos/healthcare.jpg",
-            color: "var(--color-pd)",
-            href: "#contato",
-            cta: "Saiba mais →",
+            kicker: "Linha nova · 2024",
+            headline: "Cuidado que respeita a dignidade.",
+            desc: "Sensores de detecção de queda para ILPI e home care. Monitoramento não-invasivo de quartos — alerta em segundos, sem câmera no ambiente privado.",
+            clients: ["Em expansão"],
+            image: "/photos/healthcare.jpg",
           },
         ]}
       />
@@ -222,7 +195,6 @@ export default function Home() {
             title: "Rede varejista reduz perdas com monitoramento comportamental",
             excerpt:
               "Implementação de CFTV com IA em lojas distribuídas pelo país. Correlação de eventos com ERP e alertas comportamentais em tempo real.",
-            imageSrc: "/photos/case-varejo.jpg",
             sector: "Varejo",
             sectorColor: "var(--color-red)",
             kpis: [
@@ -234,7 +206,6 @@ export default function Home() {
             title: "Porto amplia cobertura de segurança com rádio digital",
             excerpt:
               "Upgrade de comunicação analógica para DMR com cobertura integral do pátio e píer. Eliminação de pontos cegos e redução do tempo de resposta a incidentes.",
-            imageSrc: "/photos/case-porto.jpg",
             sector: "Portos",
             sectorColor: "var(--color-tech)",
             kpis: [
@@ -246,7 +217,7 @@ export default function Home() {
             title: "Planta industrial elimina falsos alarmes com detecção de gás inteligente",
             excerpt:
               "Substituição de sistema legado por solução integrada com sensores multi-gás e IA de filtragem. Conformidade NR-20 atingida no prazo.",
-            imageSrc: "/photos/case-energia.jpg",
+            imageSrc: "/images/cases/gas-detection.jpg",
             sector: "Energia",
             sectorColor: "var(--color-store)",
             kpis: [
@@ -257,34 +228,21 @@ export default function Home() {
         ]}
       />
 
-      {/* 8. P&D — Capabilities grid */}
+      {/* 8. P&D — Pillars + CTAs */}
       <PD
-        kicker="PESQUISA & DESENVOLVIMENTO"
-        heading="Inovação como prática, não como promessa."
-        subheading="Nosso laboratório de P&D desenvolve soluções proprietárias para desafios que o mercado ainda não resolveu."
-        cta="Conheça nosso laboratório →"
-        ctaHref="#contato"
-        capabilities={[
-          {
-            title: "Visão Computacional",
-            description:
-              "Algoritmos de detecção e classificação treinados com dados reais de operações brasileiras.",
-          },
-          {
-            title: "IA Embarcada",
-            description:
-              "Modelos otimizados para rodar diretamente no hardware — sem dependência de nuvem, com latência zero.",
-          },
-          {
-            title: "Integração de Sistemas",
-            description:
-              "APIs e conectores para integrar soluções ESI Exata com ERPs, SCADAs e plataformas de gestão.",
-          },
-          {
-            title: "Sensores Proprietários",
-            description:
-              "Hardware desenvolvido para condições operacionais brasileiras — temperatura, umidade e ambientes agressivos.",
-          },
+        kicker="esi | p&d · engenharia customizada"
+        heading="Quando o catálogo não resolve, a gente desenvolve."
+        highlight="a gente desenvolve"
+        subheading="Hardware, firmware, integração SCADA, analítico de borda, adaptação para ambientes classificados. Se o que você precisa não existe, nós projetamos."
+        ctaPrimary="Traga o seu desafio"
+        ctaPrimaryHref="#contato"
+        ctaSecondary="Ver projetos P&D"
+        ctaSecondaryHref="#pd"
+        pillars={[
+          { t: "Integração SCADA",     d: "de sistemas proprietários que nenhum integrador quis tocar" },
+          { t: "Hardware sob medida",  d: "placas, gateways e suportes para ambientes atípicos" },
+          { t: "Firmware customizado", d: "comportamentos específicos da sua operação, não do fabricante" },
+          { t: "Analítico de borda",   d: "modelos de IA treinados com o seu dado, na sua realidade" },
         ]}
       />
 

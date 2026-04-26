@@ -1,37 +1,28 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 
-type Sector = {
-  name: string;
-  description: string;
-  iconSrc: string;
-  photoSrc?: string;
-  color: string;
-  href?: string;
-  cta?: string;
-};
-
-type FeaturedSector = {
+type SectorItem = {
+  id: string;
+  featured?: boolean;
   name: string;
   kicker?: string;
-  description: string;
-  iconSrc: string;
-  photoSrc?: string;
-  color: string;
-  href?: string;
-  cta?: string;
+  headline: string;
+  desc: string;
+  clients: string[];
+  image: string;
 };
 
 type SectorsProps = {
   kicker?: string;
   heading?: string;
   subheading?: string;
-  featured?: FeaturedSector;
-  items?: Sector[];
+  items?: SectorItem[];
 };
 
-export function Sectors({ kicker, heading, subheading, featured, items = [] }: SectorsProps) {
+export function Sectors({ kicker, heading, subheading, items = [] }: SectorsProps) {
+  const featured = items.find((s) => s.featured);
+  const rest = items.filter((s) => !s.featured);
+
   return (
     <section id="setores" className="py-20 bg-[var(--color-ink)] text-white" aria-label="Setores">
       <Container>
@@ -48,100 +39,61 @@ export function Sectors({ kicker, heading, subheading, featured, items = [] }: S
         )}
 
         {featured && (
-          <div className="mb-8 rounded-2xl overflow-hidden bg-[var(--color-gray-900)] border border-[var(--color-gray-800)] hover:border-[var(--color-gray-700)] transition-colors relative">
-            {featured.photoSrc && (
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-15"
-                style={{ backgroundImage: `url(${featured.photoSrc})` }}
-                aria-hidden="true"
-              />
-            )}
-            <div className="relative p-8 lg:p-12 flex flex-col sm:flex-row sm:items-start gap-8">
-              <div className="shrink-0">
-                <div
-                  className="w-16 h-16 rounded-xl flex items-center justify-center"
-                  style={{ background: `${featured.color}18`, border: `1px solid ${featured.color}30` }}
-                >
-                  <Image
-                    src={featured.iconSrc}
-                    alt={featured.name}
-                    width={32}
-                    height={32}
-                    className="w-8 h-8"
-                    style={{ filter: "brightness(0) invert(1)" }}
-                  />
-                </div>
+          <div className="mb-8 rounded-2xl overflow-hidden bg-[var(--color-ink-deep)] border border-[var(--color-gray-800)] hover:border-[var(--color-gray-700)] transition-colors">
+            <div className="grid lg:grid-cols-2">
+              <div className="relative aspect-[16/10] lg:aspect-auto">
+                <Image
+                  src={featured.image}
+                  alt={featured.name}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--color-ink-deep)] hidden lg:block" />
               </div>
-              <div className="flex-1">
-                <span
-                  className="inline-block text-[10px] font-mono uppercase tracking-[0.2em] mb-3"
-                  style={{ color: featured.color }}
-                >
-                  {featured.kicker ?? "Setor em destaque"}
-                </span>
-                <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-4">
-                  {featured.name}
-                </h3>
-                <p className="text-[var(--color-gray-400)] max-w-xl leading-relaxed">{featured.description}</p>
-                {featured.cta && featured.href && (
-                  <Link
-                    href={featured.href}
-                    className="inline-block mt-6 text-sm font-medium transition-colors"
-                    style={{ color: featured.color }}
-                  >
-                    {featured.cta}
-                  </Link>
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                {featured.kicker && (
+                  <span className="inline-block text-[10px] font-mono uppercase tracking-[0.2em] text-[var(--color-red)] mb-3">
+                    {featured.kicker}
+                  </span>
                 )}
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-4">
+                  {featured.headline}
+                </h3>
+                <p className="text-[var(--color-gray-400)] leading-relaxed mb-4">{featured.desc}</p>
+                <p className="text-xs font-mono text-[var(--color-mute)]">
+                  {featured.clients.join(" · ")}
+                </p>
               </div>
             </div>
           </div>
         )}
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {items.map((sector) => (
+          {rest.map((sector) => (
             <div
-              key={sector.name}
-              className="rounded-xl bg-[var(--color-gray-900)] border border-[var(--color-gray-800)] p-6 hover:border-[var(--color-gray-600)] transition-colors group relative overflow-hidden"
+              key={sector.id}
+              className="rounded-xl overflow-hidden bg-[var(--color-ink-deep)] border border-[var(--color-gray-800)] hover:border-[var(--color-gray-600)] transition-colors group"
             >
-              {sector.photoSrc && (
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-15"
-                  style={{ backgroundImage: `url(${sector.photoSrc})` }}
-                  aria-hidden="true"
-                />
-              )}
-              <div className="relative">
-              <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
-                style={{ background: `${sector.color}15`, border: `1px solid ${sector.color}25` }}
-              >
+              <div className="relative aspect-[16/10]">
                 <Image
-                  src={sector.iconSrc}
-                  alt=""
-                  width={20}
-                  height={20}
-                  className="w-5 h-5"
-                  style={{ filter: "brightness(0) invert(1)" }}
-                  aria-hidden="true"
+                  src={sector.image}
+                  alt={sector.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink-deep)] to-transparent" />
               </div>
-              <span
-                className="text-[10px] font-mono uppercase tracking-widest"
-                style={{ color: sector.color }}
-              >
-                Setor
-              </span>
-              <h4 className="font-heading text-lg font-semibold mt-1 mb-2">{sector.name}</h4>
-              <p className="text-sm text-[var(--color-gray-400)] leading-relaxed">{sector.description}</p>
-              {sector.cta && sector.href && (
-                <Link
-                  href={sector.href}
-                  className="inline-block mt-4 text-xs font-medium transition-opacity opacity-0 group-hover:opacity-100"
-                  style={{ color: sector.color }}
-                >
-                  {sector.cta}
-                </Link>
-              )}
+              <div className="p-6">
+                {sector.kicker && (
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-tech)]">
+                    {sector.kicker}
+                  </span>
+                )}
+                <h4 className="font-heading text-lg font-semibold mt-1 mb-2">{sector.headline}</h4>
+                <p className="text-sm text-[var(--color-gray-400)] leading-relaxed mb-3">{sector.desc}</p>
+                <p className="text-[10px] font-mono text-[var(--color-mute)]">
+                  {sector.clients.join(" · ")}
+                </p>
               </div>
             </div>
           ))}

@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 
 type Client = {
   name: string;
+  sector?: string;
   logoSrc?: string;
 };
 
@@ -24,11 +25,11 @@ export function ClientBar({
           </p>
         )}
         {clients.length > 0 ? (
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-6 items-center justify-items-center">
             {clients.map((client) => (
               <div
                 key={client.name}
-                className="text-[var(--color-gray-400)] text-sm font-medium hover:text-[var(--color-gray-700)] transition-colors"
+                className="text-center"
                 title={client.name}
               >
                 {client.logoSrc ? (
@@ -37,16 +38,20 @@ export function ClientBar({
                     alt={client.name}
                     width={120}
                     height={40}
-                    className="h-8 w-auto grayscale opacity-50 hover:opacity-80 hover:grayscale-0 transition-all"
+                    className="h-8 w-auto grayscale opacity-50 hover:opacity-80 hover:grayscale-0 transition-all mx-auto"
                   />
                 ) : (
-                  <span className="font-mono text-xs tracking-wider">{client.name}</span>
+                  <span className="font-heading text-sm font-semibold text-[var(--color-gray-700)]">{client.name}</span>
+                )}
+                {client.sector && (
+                  <span className="block mt-1 text-[10px] font-mono uppercase tracking-wider text-[var(--color-gray-400)]">
+                    {client.sector}
+                  </span>
                 )}
               </div>
             ))}
           </div>
         ) : (
-          /* Placeholder row when no client data */
           <div className="flex flex-wrap items-center justify-center gap-12">
             {["Cliente A", "Cliente B", "Cliente C", "Cliente D", "Cliente E", "Cliente F"].map((name) => (
               <div

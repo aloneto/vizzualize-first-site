@@ -1,11 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 
 type SubBrand = {
-  name: string;
-  href: string;
-  logoSrc: string;
+  id: string;
+  label: string;
+  color: string;
+  href?: string;
 };
 
 type NavProps = {
@@ -25,18 +25,13 @@ export function Nav({ subBrands = [] }: NavProps) {
         <div className="w-px h-3 bg-[var(--color-gray-700)] shrink-0" aria-hidden="true" />
         {subBrands.map((brand) => (
           <Link
-            key={brand.name}
-            href={brand.href}
-            className="flex items-center gap-1.5 whitespace-nowrap group shrink-0"
-            aria-label={brand.name}
+            key={brand.id}
+            href={brand.href ?? `#${brand.id}`}
+            className="flex items-center gap-0 whitespace-nowrap group shrink-0 text-sm font-mono tracking-wider opacity-60 hover:opacity-100 transition-opacity"
+            aria-label={brand.label}
           >
-            <Image
-              src={brand.logoSrc}
-              alt={brand.name}
-              width={80}
-              height={20}
-              className="h-4 w-auto opacity-60 group-hover:opacity-100 transition-opacity"
-            />
+            <span className="text-white">{brand.label.split("|")[0]}</span>
+            <span style={{ color: brand.color }}>|{brand.label.split("|")[1]}</span>
           </Link>
         ))}
       </Container>

@@ -4,32 +4,49 @@ import { Button } from "@/components/ui/Button";
 
 type Stat = {
   value: string;
+  suffix?: string;
   label: string;
+  sub?: string;
 };
 
 type HeroProps = {
-  kicker?: string;
+  badge?: string;
   heading: string;
+  highlightWord?: string;
   subheading?: string;
-  ctaText?: string;
-  ctaLink?: string;
-  secondaryCtaText?: string;
-  secondaryCtaLink?: string;
+  ctaPrimary?: string;
+  ctaPrimaryLink?: string;
+  ctaSecondary?: string;
+  ctaSecondaryLink?: string;
   stats?: Stat[];
   imageSrc?: string;
 };
 
 export function Hero({
-  kicker,
+  badge,
   heading,
+  highlightWord,
   subheading,
-  ctaText,
-  ctaLink,
-  secondaryCtaText,
-  secondaryCtaLink,
+  ctaPrimary,
+  ctaPrimaryLink = "#contato",
+  ctaSecondary,
+  ctaSecondaryLink = "#store",
   stats = [],
   imageSrc,
 }: HeroProps) {
+  const renderHeading = () => {
+    if (!highlightWord) return heading;
+    const idx = heading.indexOf(highlightWord);
+    if (idx === -1) return heading;
+    return (
+      <>
+        {heading.slice(0, idx)}
+        <span className="text-[var(--color-red)]">{highlightWord}</span>
+        {heading.slice(idx + highlightWord.length)}
+      </>
+    );
+  };
+
   return (
     <section
       className="relative min-h-[88vh] flex items-center bg-[var(--color-ink)] text-white overflow-hidden"
@@ -57,7 +74,7 @@ export function Hero({
 
       {/* Gradient overlays for depth */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-[var(--color-ink)] via-transparent to-[var(--color-gray-900)]/60"
+        className="absolute inset-0 bg-gradient-to-br from-[var(--color-ink)] via-transparent to-[var(--color-ink-deep)]/60"
         aria-hidden="true"
       />
       <div
@@ -78,13 +95,13 @@ export function Hero({
       />
 
       <Container className="relative z-10 py-24 lg:py-40">
-        {kicker && (
-          <span className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] uppercase text-[var(--color-tech)] mb-8 border border-[var(--color-tech)]/30 bg-[var(--color-tech)]/5 px-4 py-1.5 rounded-full">
-            {kicker}
+        {badge && (
+          <span className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.15em] text-[var(--color-mute)] mb-8 border border-[var(--color-tech)]/20 bg-[var(--color-tech)]/5 px-4 py-1.5 rounded-full">
+            {badge}
           </span>
         )}
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-bold leading-[1.05] tracking-tight max-w-4xl">
-          {heading}
+          {renderHeading()}
         </h1>
         {subheading && (
           <p className="mt-6 text-lg sm:text-xl text-[var(--color-gray-400)] max-w-2xl leading-relaxed">
@@ -92,17 +109,17 @@ export function Hero({
           </p>
         )}
         <div className="mt-10 flex flex-wrap gap-4">
-          {ctaText && ctaLink && (
-            <Link href={ctaLink}>
+          {ctaPrimary && (
+            <Link href={ctaPrimaryLink}>
               <Button variant="primary" size="lg">
-                {ctaText}
+                {ctaPrimary}
               </Button>
             </Link>
           )}
-          {secondaryCtaText && secondaryCtaLink && (
-            <Link href={secondaryCtaLink}>
+          {ctaSecondary && (
+            <Link href={ctaSecondaryLink}>
               <Button variant="outline" size="lg">
-                {secondaryCtaText}
+                {ctaSecondary}
               </Button>
             </Link>
           )}
@@ -112,11 +129,16 @@ export function Hero({
             {stats.map((stat) => (
               <div key={stat.label}>
                 <div className="font-heading text-3xl sm:text-4xl font-bold text-[var(--color-red)]">
-                  {stat.value}
+                  {stat.value}{stat.suffix ?? ""}
                 </div>
-                <div className="mt-1.5 text-sm text-[var(--color-gray-500)] leading-snug">
+                <div className="mt-1.5 text-sm text-[var(--color-gray-400)] leading-snug">
                   {stat.label}
                 </div>
+                {stat.sub && (
+                  <div className="mt-0.5 text-xs text-[var(--color-mute)]">
+                    {stat.sub}
+                  </div>
+                )}
               </div>
             ))}
           </div>
