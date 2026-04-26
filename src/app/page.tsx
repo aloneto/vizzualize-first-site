@@ -32,6 +32,7 @@ export default function Home() {
         ctaPrimaryLink="#contato"
         ctaSecondary="Comprar na ESI Store"
         ctaSecondaryLink="#store"
+        imageSrc="/photos/hero.jpg"
         stats={[
           { value: "22", suffix: "+", label: "anos de operação", sub: "Desde 2003" },
           { value: "3", label: "grandes redes de varejo", sub: "Carrefour · Atacadão · Assaí" },
@@ -60,9 +61,9 @@ export default function Home() {
         kicker="@ESI_EXATA"
         heading="Tecnologia que opera onde outros não chegam."
         items={[
-          { quote: "Segurança evita problemas antes deles acontecerem.", accentColor: "var(--color-red)" },
-          { quote: "Prevenir é melhor que remediar.", accentColor: "var(--color-tech)" },
-          { quote: "Não é luxo. É proteção.", accentColor: "var(--color-pd)" },
+          { imageSrc: "/photos/editorial-comunicacao-campo.jpg", quote: "Segurança evita problemas antes deles acontecerem.", attribution: "Comunicação em Campo", accentColor: "var(--color-red)" },
+          { imageSrc: "/photos/editorial-monitoramento.jpg", quote: "Prevenir é melhor que remediar.", attribution: "Monitoramento de Infraestrutura", accentColor: "var(--color-tech)" },
+          { imageSrc: "/photos/editorial-instalacao-altura.jpg", quote: "Não é luxo. É proteção.", attribution: "Instalação em Altura", accentColor: "var(--color-pd)" },
           { quote: "Incidentes mancham reputações.", accentColor: "var(--color-red)" },
           { quote: "Segurança inteligente age antes.", accentColor: "var(--color-agro)" },
           { quote: "Veja tudo. Controle tudo.", accentColor: "var(--color-tech)" },
@@ -195,6 +196,7 @@ export default function Home() {
             title: "Rede varejista reduz perdas com monitoramento comportamental",
             excerpt:
               "Implementação de CFTV com IA em lojas distribuídas pelo país. Correlação de eventos com ERP e alertas comportamentais em tempo real.",
+            imageSrc: "/photos/case-varejo.jpg",
             sector: "Varejo",
             sectorColor: "var(--color-red)",
             kpis: [
@@ -206,6 +208,7 @@ export default function Home() {
             title: "Porto amplia cobertura de segurança com rádio digital",
             excerpt:
               "Upgrade de comunicação analógica para DMR com cobertura integral do pátio e píer. Eliminação de pontos cegos e redução do tempo de resposta a incidentes.",
+            imageSrc: "/photos/case-porto.jpg",
             sector: "Portos",
             sectorColor: "var(--color-tech)",
             kpis: [
@@ -217,7 +220,7 @@ export default function Home() {
             title: "Planta industrial elimina falsos alarmes com detecção de gás inteligente",
             excerpt:
               "Substituição de sistema legado por solução integrada com sensores multi-gás e IA de filtragem. Conformidade NR-20 atingida no prazo.",
-            imageSrc: "/images/cases/gas-detection.jpg",
+            imageSrc: "/photos/case-energia.jpg",
             sector: "Energia",
             sectorColor: "var(--color-store)",
             kpis: [
