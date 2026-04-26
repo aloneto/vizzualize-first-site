@@ -45,14 +45,14 @@ export default function Home() {
       <ClientBar
         heading="EMPRESAS QUE CONFIAM NA ESI EXATA"
         clients={[
-          { name: "Carrefour",          sector: "Varejo" },
-          { name: "Atacadão",           sector: "Varejo" },
-          { name: "Assaí",              sector: "Varejo" },
-          { name: "Porto de Santos",    sector: "Portuário" },
-          { name: "Porto de Chibatão",  sector: "Portuário" },
-          { name: "Edge Gas",           sector: "Energia" },
-          { name: "IMPASA",             sector: "Agronegócio" },
-          { name: "ILS Agro",           sector: "Agronegócio" },
+          { name: "Carrefour",          sector: "Varejo",      logoSrc: "/logos/clients/carrefour.png" },
+          { name: "Atacadão",           sector: "Varejo",      logoSrc: "/logos/clients/atacadao.png" },
+          { name: "Assaí",              sector: "Varejo",      logoSrc: "/logos/clients/assai.png" },
+          { name: "Porto de Santos",    sector: "Portuário",   logoSrc: "/logos/clients/porto-santos.png" },
+          { name: "Porto de Chibatão",  sector: "Portuário",   logoSrc: "/logos/clients/porto-chibatao.png" },
+          { name: "Edge Gas",           sector: "Energia",     logoSrc: "/logos/clients/edge-gas.svg" },
+          { name: "Inpasa",             sector: "Agronegócio", logoSrc: "/logos/clients/inpasa.png" },
+          { name: "ILS Agro",           sector: "Agronegócio", logoSrc: "/logos/clients/ils-agro.svg" },
         ]}
       />
 
