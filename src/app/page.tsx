@@ -52,7 +52,7 @@ export default function Home() {
           { name: "Porto de Chibatão",  sector: "Portuário",   logoSrc: "/logos/clients/porto-chibatao.png" },
           { name: "Edge Gas",           sector: "Energia",     logoSrc: "/logos/clients/edge-gas.svg" },
           { name: "Inpasa",             sector: "Agronegócio", logoSrc: "/logos/clients/inpasa.png" },
-          { name: "ILS Agro",           sector: "Agronegócio", logoSrc: "/logos/clients/ils-agro.svg" },
+          { name: "C&A",                sector: "Varejo",      logoSrc: "/logos/clients/cea.png" },
         ]}
       />
 

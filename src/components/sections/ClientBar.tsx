@@ -38,7 +38,7 @@ export function ClientBar({
                     alt={client.name}
                     width={120}
                     height={40}
-                    className="h-8 w-auto grayscale opacity-50 hover:opacity-80 hover:grayscale-0 transition-all mx-auto"
+                    className="h-10 w-auto opacity-90 hover:opacity-100 transition-all mx-auto"
                   />
                 ) : (
                   <span className="font-heading text-sm font-semibold text-[var(--color-gray-700)]">{client.name}</span>
