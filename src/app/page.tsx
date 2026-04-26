@@ -64,9 +64,9 @@ export default function Home() {
           { imageSrc: "/photos/editorial-comunicacao-campo.jpg", quote: "Segurança evita problemas antes deles acontecerem.", attribution: "Comunicação em Campo", accentColor: "var(--color-red)" },
           { imageSrc: "/photos/editorial-monitoramento.jpg", quote: "Prevenir é melhor que remediar.", attribution: "Monitoramento de Infraestrutura", accentColor: "var(--color-tech)" },
           { imageSrc: "/photos/editorial-instalacao-altura.jpg", quote: "Não é luxo. É proteção.", attribution: "Instalação em Altura", accentColor: "var(--color-pd)" },
-          { quote: "Incidentes mancham reputações.", accentColor: "var(--color-red)" },
-          { quote: "Segurança inteligente age antes.", accentColor: "var(--color-agro)" },
-          { quote: "Veja tudo. Controle tudo.", accentColor: "var(--color-tech)" },
+          { imageSrc: "/photos/editorial-incidentes.jpg", quote: "Incidentes mancham reputações.", accentColor: "var(--color-red)" },
+          { imageSrc: "/photos/editorial-seguranca-inteligente.jpg", quote: "Segurança inteligente age antes.", accentColor: "var(--color-agro)" },
+          { imageSrc: "/photos/editorial-controle-total.jpg", quote: "Veja tudo. Controle tudo.", accentColor: "var(--color-tech)" },
         ]}
       />
 
