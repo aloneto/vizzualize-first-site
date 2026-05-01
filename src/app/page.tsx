@@ -24,20 +24,20 @@ export default function Home() {
 
       {/* 2. Hero — Headline, stats, CTAs */}
       <Hero
-        badge="Carrefour · Atacadão · Assaí · Porto de Santos · Porto de Chibatão · Edge Gas · IMPASA · ILS Agro"
+        badge="C&A · Riachuelo · Atacadão · Assaí · Porto de Santos · Porto de Chibatão · Edge Gas · IMPASA · ILS Agro"
         heading="Segurança evita problemas antes deles acontecerem."
         highlightWord="antes"
-        subheading="A engenharia de imagem, comunicação crítica e prevenção de perdas por trás das maiores operações de varejo, porto, energia e agro do Brasil. Há 22 anos."
+        subheading="A engenharia de imagem, comunicação crítica e prevenção de perdas por trás das maiores operações de varejo, porto, energia e agro do Brasil. Há 21 anos."
         ctaPrimary="Quero um diagnóstico"
         ctaPrimaryLink="#contato"
         ctaSecondary="Comprar na ESI Store"
         ctaSecondaryLink="#store"
         imageSrc="/photos/hero.jpg"
         stats={[
-          { value: "22", suffix: "+", label: "anos de operação", sub: "Desde 2003" },
-          { value: "3", label: "grandes redes de varejo", sub: "Carrefour · Atacadão · Assaí" },
+          { value: "21", suffix: "+", label: "anos de operação", sub: "Desde 2004" },
+          { value: "1.170", suffix: "+", label: "unidades varejo", sub: "Grandes redes nacionais" },
+          { value: "5", label: "centros logísticos", sub: "Distribuição nacional" },
           { value: "2", label: "portos atendidos", sub: "Santos · Chibatão" },
-          { value: "2", label: "unidades", sub: "Curitiba PR · Sinop MT" },
         ]}
       />
 
@@ -83,7 +83,7 @@ export default function Home() {
             kicker: "Eixo principal · Grandes redes",
             headline: "Prevenção de perdas em escala nacional.",
             desc: "CFTV integrado com analítico, controle de acesso e rádio digital em centenas de lojas. Operação padronizada, centralizada e auditável — do hipermercado ao centro de distribuição.",
-            clients: ["Carrefour", "Atacadão", "Assaí"],
+            clients: ["Assaí", "Atacadão", "C&A", "Riachuelo"],
             image: "/photos/varejo.jpg",
           },
           {
@@ -116,7 +116,7 @@ export default function Home() {
           {
             id: "healthcare",
             name: "Healthcare",
-            kicker: "Linha nova · 2024",
+            kicker: "Linha nova · 2025",
             headline: "Cuidado que respeita a dignidade.",
             desc: "Sensores de detecção de queda para ILPI e home care. Monitoramento não-invasivo de quartos — alerta em segundos, sem câmera no ambiente privado.",
             clients: ["Em expansão"],

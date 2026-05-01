@@ -20,7 +20,7 @@ export function Nav({ subBrands = [] }: NavProps) {
     >
       <Container className="flex items-center gap-6 py-1.5 overflow-x-auto">
         <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--color-gray-600)] whitespace-nowrap shrink-0">
-          Grupo ESI
+          GRUPO ESI · MATRIZ CURITIBA PR · FILIAL AGRO SINOP MT
         </span>
         <div className="w-px h-3 bg-[var(--color-gray-700)] shrink-0" aria-hidden="true" />
         {subBrands.map((brand) => (
