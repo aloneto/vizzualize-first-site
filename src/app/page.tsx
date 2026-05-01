@@ -38,9 +38,6 @@ export default function Home() {
       {/* 3. ClientsSection — Marquee animado de clientes */}
       <ClientsSection />
 
-      {/* 3b. PartnersSection — Marquee animado de parceiros de tecnologia */}
-      <PartnersSection />
-
       {/* 4. Editorial — Frases do Instagram @esi_exata */}
       <Editorial
         kicker="@ESI_EXATA"
@@ -215,6 +212,9 @@ export default function Home() {
           },
         ]}
       />
+
+      {/* 7b. PartnersSection — Marquee animado de parceiros de tecnologia */}
+      <PartnersSection />
 
       {/* 8. P&D — Pillars + CTAs */}
       <PD
