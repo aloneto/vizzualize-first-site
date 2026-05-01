@@ -1,6 +1,7 @@
 import { Nav } from "@/components/sections/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { ClientsSection } from "@/components/sections/Clients";
+import { PartnersSection } from "@/components/sections/Partners";
 import { Editorial } from "@/components/sections/Editorial";
 import { Sectors } from "@/components/sections/Sectors";
 import { Solutions } from "@/components/sections/Solutions";
@@ -36,6 +37,9 @@ export default function Home() {
 
       {/* 3. ClientsSection — Marquee animado de clientes */}
       <ClientsSection />
+
+      {/* 3b. PartnersSection — Marquee animado de parceiros de tecnologia */}
+      <PartnersSection />
 
       {/* 4. Editorial — Frases do Instagram @esi_exata */}
       <Editorial
