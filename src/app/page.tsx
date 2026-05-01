@@ -1,6 +1,6 @@
 import { Nav } from "@/components/sections/Nav";
 import { Hero } from "@/components/sections/Hero";
-import { ClientBar } from "@/components/sections/ClientBar";
+import { ClientsSection } from "@/components/sections/Clients";
 import { Editorial } from "@/components/sections/Editorial";
 import { Sectors } from "@/components/sections/Sectors";
 import { Solutions } from "@/components/sections/Solutions";
@@ -34,20 +34,8 @@ export default function Home() {
         ]}
       />
 
-      {/* 3. ClientBar — Clientes reais */}
-      <ClientBar
-        heading="EMPRESAS QUE CONFIAM NA ESI EXATA"
-        clients={[
-          { name: "Carrefour",          sector: "Varejo",      logoSrc: "/logos/clients/carrefour.png" },
-          { name: "Atacadão",           sector: "Varejo",      logoSrc: "/logos/clients/atacadao.png" },
-          { name: "Assaí",              sector: "Varejo",      logoSrc: "/logos/clients/assai.png" },
-          { name: "Porto de Santos",    sector: "Portuário",   logoSrc: "/logos/clients/porto-santos.png" },
-          { name: "Porto de Chibatão",  sector: "Portuário",   logoSrc: "/logos/clients/porto-chibatao.png" },
-          { name: "Edge Gas",           sector: "Energia",     logoSrc: "/logos/clients/edge-gas.png" },
-          { name: "Inpasa",             sector: "Agronegócio", logoSrc: "/logos/clients/inpasa.png" },
-          { name: "C&A",                sector: "Varejo",      logoSrc: "/logos/clients/cea.png" },
-        ]}
-      />
+      {/* 3. ClientsSection — Marquee animado de clientes */}
+      <ClientsSection />
 
       {/* 4. Editorial — Frases do Instagram @esi_exata */}
       <Editorial
