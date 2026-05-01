@@ -13,14 +13,7 @@ export default function Home() {
   return (
     <>
       {/* 1. Nav — Sub-brands bar */}
-      <Nav
-        subBrands={[
-          { id: "exata", label: "esi|exata", color: "var(--color-red)" },
-          { id: "agro",  label: "esi|agro",  color: "var(--color-agro)" },
-          { id: "pd",    label: "esi|p&d",   color: "var(--color-pd)" },
-          { id: "store", label: "esi|store", color: "var(--color-store)" },
-        ]}
-      />
+      <Nav />
 
       {/* 2. Hero — Headline, stats, CTAs */}
       <Hero
