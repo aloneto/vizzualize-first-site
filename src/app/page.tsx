@@ -9,6 +9,7 @@ import { Cases } from "@/components/sections/Cases";
 import { PD } from "@/components/sections/PD";
 import { Store } from "@/components/sections/Store";
 import { CTAFooter } from "@/components/sections/CTAFooter";
+import { AgroSpotlight } from "@/components/agro/AgroSpotlight";
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
 
       {/* 3. ClientsSection — Marquee animado de clientes */}
       <ClientsSection />
+
+      {/* 3b. AgroSpotlight — Card destaque ESI Agro */}
+      <AgroSpotlight />
 
       {/* 4. Editorial — Frases do Instagram @esi_exata */}
       <Editorial

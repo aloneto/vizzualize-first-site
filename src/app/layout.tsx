@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Inter, JetBrains_Mono } from "next/font/google";
+import { Sora, Inter, JetBrains_Mono, DM_Serif_Display, DM_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
@@ -18,6 +18,19 @@ const inter = Inter({
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  variable: "--font-dm-serif",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   display: "swap",
 });
@@ -101,7 +114,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} ${dmSerifDisplay.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
         <script

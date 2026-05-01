@@ -18,6 +18,24 @@
   --color-tech-deep: #0E6FA8;
   --color-tech-glow: rgba(31, 169, 230, 0.18);
 
+  /* === ESI Agro — paleta dedicada ================================== */
+  --color-agro-green: #1F5F2E;
+  --color-agro-green-deep: #143E1E;
+  --color-agro-green-light: #3F8B4E;
+  --color-agro-yellow: #E8B923;
+  --color-agro-yellow-soft: #F5D670;
+  --color-agro-earth: #7A5A3A;
+  --color-agro-cream: #F5F1E6;
+  --color-agro-paper: #FBFAF4;
+  --color-agro-ink: #0F1A12;
+  --color-agro-mute: #5A6856;
+  --color-agro-line: #D9D5C4;
+
+  /* Agro fonts */
+  --font-agro-heading: var(--font-dm-serif);
+  --font-agro-body: var(--font-dm-sans);
+  --font-agro-mono: var(--font-jetbrains-mono);
+
   /* Neutrals */
   --color-white: #ffffff;
   --color-gray-50: #f8f9fa;
@@ -87,4 +105,14 @@ h1, h2, h3, h4, h5, h6 {
   .marquee-track {
     animation: none;
   }
+}
+
+/* === ESI Agro — pulse badge animation =============================== */
+@keyframes agro-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.agro-pulse {
+  animation: agro-pulse 2s ease-in-out infinite;
 }
