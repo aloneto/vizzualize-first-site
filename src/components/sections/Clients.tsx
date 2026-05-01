@@ -37,7 +37,7 @@ export function ClientsSection() {
                 alt={client.name}
                 width={160}
                 height={60}
-                className="h-[60px] w-[160px] object-contain grayscale transition-all duration-300 hover:grayscale-0"
+                className="h-[60px] w-[160px] object-contain transition-all duration-300"
               />
               <span className="text-xs font-medium text-secondary-400">{client.category}</span>
             </div>
@@ -53,7 +53,7 @@ export function ClientsSection() {
                 alt=""
                 width={160}
                 height={60}
-                className="h-[60px] w-[160px] object-contain grayscale transition-all duration-300 hover:grayscale-0"
+                className="h-[60px] w-[160px] object-contain transition-all duration-300"
               />
               <span className="text-xs font-medium text-secondary-400">{client.category}</span>
             </div>
