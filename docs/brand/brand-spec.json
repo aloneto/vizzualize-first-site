@@ -1,0 +1,436 @@
+{
+  "$schema": "esi-exata-brand-spec/v1",
+  "brand": {
+    "name": "ESI Exata",
+    "parent": "Grupo ESI",
+    "siblings": ["esi|exata", "esi|agro", "esi|p&d", "esi|store"],
+    "tagline_master": "Segurança evita problemas antes deles acontecerem.",
+    "elevator": "Engenharia de imagem, comunicação crítica e prevenção de perdas para varejo, portos, energia, agro e healthcare. Há 21 anos.",
+    "founded": 2004,
+    "instagram": "@esi_exata",
+    "site": "https://projeto-interno-teste.vercel.app/"
+  },
+
+  "post_format": {
+    "platform": "instagram_feed",
+    "aspect": "4:5",
+    "size_px": { "w": 1080, "h": 1350 },
+    "safe_margins_px": { "top": 80, "right": 80, "bottom": 140, "left": 80 },
+    "logo_safe_zone_px": { "bottom": 80, "min_height": 56 }
+  },
+
+  "color": {
+    "primary": {
+      "esi_red":     { "hex": "#E11D2A", "rgb": [225, 29, 42],  "role": "marca, seta-grafismo, destaques pontuais" },
+      "esi_red_deep":{ "hex": "#B0121E", "rgb": [176, 18, 30],  "role": "sombra/profundidade da seta" }
+    },
+    "neutral": {
+      "deep":   { "hex": "#0E1620", "rgb": [14, 22, 32],   "role": "overlay escuro de foto, fundo grave" },
+      "ink":    { "hex": "#111827", "rgb": [17, 24, 39],   "role": "texto secundário sobre claro" },
+      "white":  { "hex": "#FFFFFF", "rgb": [255, 255, 255],"role": "headline, logo sobre escuro" },
+      "fog":    { "hex": "#F5F2EC", "rgb": [245, 242, 236],"role": "fundo claro raro" }
+    },
+    "support_overlay": {
+      "scrim_dark": "linear-gradient(180deg, rgba(8,12,18,0.10) 0%, rgba(8,12,18,0.55) 60%, rgba(8,12,18,0.78) 100%)",
+      "scrim_radial_center": "radial-gradient(ellipse at 50% 55%, rgba(8,12,18,0.20) 0%, rgba(8,12,18,0.70) 70%)"
+    },
+    "rules": [
+      "Vermelho ESI nunca toca o headline — só aparece na seta-grafismo, no logo e em formas decorativas.",
+      "Headlines sempre em branco puro (#FFFFFF).",
+      "Foto recebe sempre overlay escuro para garantir contraste WCAG AA do texto branco."
+    ]
+  },
+
+  "typography": {
+    "display": {
+      "family": "Barlow Condensed",
+      "fallback": "Saira Condensed, Oswald, Impact, Arial Narrow, sans-serif",
+      "weight": 800,
+      "style": "italic",
+      "case": "sentence",
+      "tracking_em": -0.01,
+      "leading": 0.92,
+      "size_px": { "min": 64, "default": 96, "max": 132 },
+      "color": "#FFFFFF",
+      "use": "Toda chamada principal do post"
+    },
+    "support": {
+      "family": "Barlow",
+      "fallback": "Inter, Helvetica, Arial, sans-serif",
+      "weight": 400,
+      "style": "italic",
+      "case": "sentence",
+      "size_px": { "min": 22, "default": 28, "max": 36 },
+      "color": "#FFFFFF",
+      "leading": 1.25,
+      "use": "Linha de apoio sob a chamada"
+    },
+    "meta": {
+      "family": "Barlow",
+      "weight": 500,
+      "style": "normal",
+      "case": "sentence",
+      "size_px": 22,
+      "color": "#FFFFFF",
+      "use": "Tag superior tipo localização ('Loja 349, em Santo André (Utinga)')"
+    },
+    "rules": [
+      "Display SEMPRE em itálico — é a assinatura tipográfica da marca.",
+      "Quebra de linha manual e propositada: a chamada nunca corre sozinha. 2–4 linhas, ritmo poético.",
+      "Pontuação fechada: sempre termina com ponto final ou exclamação. Nunca reticências."
+    ]
+  },
+
+  "logo": {
+    "lockups": [
+      {
+        "id": "exata_solo",
+        "label": "ESI Exata sozinho",
+        "use": "Posts focados em segurança patrimonial / varejo / corporativo",
+        "anatomy": ["seta vermelha tripla (▷▷▷)", "wordmark 'esi|exata'"],
+        "min_height_px": 56
+      },
+      {
+        "id": "dual_esi_exata",
+        "label": "esi (mãe) + esi|exata",
+        "use": "Posts institucionais e de portfólio amplo. É o lockup MAIS USADO atualmente.",
+        "anatomy": ["logo 'esi · soluções integradas' à esquerda", "linha divisória ou hífen", "lockup 'esi|exata' com seta vermelha à direita"],
+        "min_height_px": 56
+      }
+    ],
+    "placement": {
+      "default": "bottom-center",
+      "alternates": ["bottom-left"]
+    },
+    "clear_space_px": 24,
+    "do_not": [
+      "Nunca recolorir o vermelho.",
+      "Nunca aplicar logo sobre área de texto da chamada.",
+      "Nunca usar o lockup dual em fundo claro sem versão monocromática preparada."
+    ]
+  },
+
+  "graphic_device": {
+    "name": "Seta ESI",
+    "description": "A seta tripla vermelha do logo é o ÚNICO grafismo proprietário. Reusada em escala ampliada como elemento decorativo: como blob lateral, como recorte angular ou como mosaico de triângulos no canto.",
+    "treatments": [
+      {
+        "id": "blob_lateral",
+        "use": "Quando a foto tem espaço lateral neutro. Seta gigante atravessa metade do post.",
+        "rotation_deg": 0,
+        "scale": "60–80% da altura do post",
+        "opacity": 1,
+        "examples": ["Segurança de verdade é planejada", "Controle quem entra e sai"]
+      },
+      {
+        "id": "canto_mosaico",
+        "use": "Canto superior — 2 a 3 setas em escala variável, como confete sólido.",
+        "scale": "8–18% da altura do post",
+        "examples": ["Inovação que protege", "Controle quem entra e sai"]
+      },
+      {
+        "id": "ausente",
+        "use": "Posts sóbrios e textuais — só logo no rodapé. Maioria do feed atual.",
+        "examples": ["Tecnologia que protege", "O perigo não está só do lado de fora"]
+      }
+    ],
+    "do_not": [
+      "Não inventar novos ícones decorativos.",
+      "Não usar shapes geométricas estranhas (círculos, hexágonos, etc.).",
+      "Não animar/rotacionar de forma aleatória — a seta sempre aponta pra direita."
+    ]
+  },
+
+  "layout_templates": [
+    {
+      "id": "T01_centered_dark",
+      "name": "Centro escuro",
+      "frequency": "alto",
+      "structure": "Foto temática em tela cheia + scrim escuro radial → headline centralizado vertical/horizontal + logo no rodapé.",
+      "headline_position": "center",
+      "headline_align": "center",
+      "graphic_device": "ausente",
+      "examples": ["Tecnologia que protege", "Comunicação que protege", "Confiar é o primeiro passo da segurança", "Inovação que protege!"]
+    },
+    {
+      "id": "T02_bottom_dark",
+      "name": "Base escura",
+      "frequency": "alto",
+      "structure": "Foto em tela cheia + scrim degradê de baixo pra cima → headline no terço inferior, alinhado à esquerda OU centralizado. Logo abaixo.",
+      "headline_position": "bottom",
+      "headline_align": "left",
+      "graphic_device": "ausente",
+      "examples": ["Sua empresa, nossa prioridade.", "Tecnologia que protege em tempo real.", "Soluções que economizam e protegem."]
+    },
+    {
+      "id": "T03_blob_lateral",
+      "name": "Seta lateral",
+      "frequency": "médio",
+      "structure": "Foto em tela cheia + seta vermelha gigante entrando pela direita ou esquerda → headline branco sobre a área da seta + logo no rodapé.",
+      "headline_position": "right_or_left",
+      "headline_align": "left",
+      "graphic_device": "blob_lateral",
+      "examples": ["Segurança de verdade é planejada.", "Controle quem entra e sai!"]
+    },
+    {
+      "id": "T04_split_color",
+      "name": "Bloco sólido + foto",
+      "frequency": "baixo",
+      "structure": "Bloco vertical de cor sólida (vermelho ESI ou cor extraída da foto) ocupa ~40% da largura → foto preenche o resto. Headline branco no bloco.",
+      "headline_position": "left_block",
+      "headline_align": "left",
+      "graphic_device": "ausente",
+      "examples": ["Abra portas para a segurança."]
+    },
+    {
+      "id": "T05_oversized_type",
+      "name": "Tipografia gigante",
+      "frequency": "raro",
+      "structure": "Headline em tamanho XL ocupando 50–70% do post, sangrando nas bordas. Foto secundária abaixo. Pílula com info de contexto no topo.",
+      "headline_position": "top_dominant",
+      "headline_align": "left",
+      "graphic_device": "ausente",
+      "use": "Anúncios e marcos — inauguração, lançamento, milestone.",
+      "examples": ["Inauguração da nova loja (Assaí Atacadista)"]
+    }
+  ],
+
+  "photography": {
+    "subjects_allow": [
+      "câmeras CFTV em contexto real (mercado, condomínio, rua, escola, indústria)",
+      "controle de acesso (interfone, biometria, fechadura digital)",
+      "cancelas e perímetro (varejo, condomínio, indústria)",
+      "central de monitoramento (operadora com headset, telas múltiplas)",
+      "infraestrutura tech (placas, fibra, data center) — apenas como pano de fundo",
+      "pessoas em contexto operacional (entregador, segurança, operador)",
+      "abstrações tech (rede neural, fluxo de dados, padrões — sempre em azul/vermelho)"
+    ],
+    "subjects_avoid": [
+      "imagens 'genéricas de segurança' (cadeado vermelho com 1's e 0's)",
+      "ilustrações 3D infantis ou cartunizadas",
+      "fotos com pessoas sorrindo em pose corporativa de banco de imagens",
+      "armas, fardamento militar, qualquer tom intimidador"
+    ],
+    "treatment": {
+      "color_grade": "Tons frios e azulados ou laranjas industriais; saturação média; não use grade pastel.",
+      "overlay": "SEMPRE aplique scrim escuro (≥40% de opacidade no ponto onde o texto pousa). Sem scrim, não publica.",
+      "focus": "O sujeito (câmera, fechadura, cancela) é o herói — fora de centro, regra dos terços. O texto pousa no espaço negativo."
+    }
+  },
+
+  "copy_system": {
+    "voice": {
+      "attributes": ["confiante", "técnica", "afirmativa", "sem floreio", "ritmo curto"],
+      "person": "3ª pessoa institucional, com pontos de imperativa direta ('Veja tudo. Controle tudo.')",
+      "register": "B2B brasileiro, técnico mas não jargonizado. Lê como manifesto curto, não como folder."
+    },
+    "rules": [
+      "Headlines têm 2 a 6 palavras na chamada principal. Quase nunca passam de 7.",
+      "Sempre fechar com '.' ou '!' — nunca abrir e deixar pendurado.",
+      "Quebra de linha é parte da tipografia — coloque uma quebra a cada 2–3 palavras.",
+      "Evite palavras vazias: 'simplesmente', 'realmente', 'totalmente'.",
+      "Evite jargão técnico não-explicado em posts genéricos (CFTV, DMR, NR-20 ficam para legenda/cards).",
+      "Use o ponto final mesmo em frases curtas de 2 palavras ('Para condomínio.')."
+    ],
+    "headline_formulas": [
+      {
+        "id": "F01_substantivo_que_verbo",
+        "pattern": "[Substantivo] que [verbo].",
+        "examples": [
+          "Tecnologia que protege.",
+          "Inovação que protege!",
+          "Comunicação que protege.",
+          "Soluções que economizam e protegem.",
+          "Tecnologia que protege em tempo real."
+        ]
+      },
+      {
+        "id": "F02_x_eh_y",
+        "pattern": "[X] é [Y].",
+        "examples": [
+          "Segurança de verdade é planejada.",
+          "Confiar é o primeiro passo da segurança.",
+          "Inovação é nosso sistema de segurança.",
+          "Não é luxo. É proteção."
+        ]
+      },
+      {
+        "id": "F03_imperativo_curto",
+        "pattern": "[Verbo no imperativo] [complemento].",
+        "examples": [
+          "Controle quem entra e sai!",
+          "Abra portas para a segurança.",
+          "Veja tudo. Controle tudo."
+        ]
+      },
+      {
+        "id": "F04_possessivo",
+        "pattern": "Sua [coisa], nossa [valor].",
+        "examples": [
+          "Sua empresa, nossa prioridade.",
+          "Sua operação, nossa engenharia."
+        ]
+      },
+      {
+        "id": "F05_insight_aviso",
+        "pattern": "[Verdade contraintuitiva sobre risco].",
+        "examples": [
+          "O perigo não está só do lado de fora.",
+          "Segurança evita problemas antes deles acontecerem.",
+          "Segurança inteligente age antes.",
+          "Incidentes mancham reputações."
+        ]
+      },
+      {
+        "id": "F06_segmento_curto",
+        "pattern": "Para [segmento].",
+        "examples": [
+          "Para condomínio.",
+          "Para o varejo.",
+          "Para o porto."
+        ],
+        "use": "Apenas em séries de carrossel ou posts curtíssimos de segmentação."
+      },
+      {
+        "id": "F07_promessa_ampliada",
+        "pattern": "[Substantivo abstrato] para [quem/contexto].",
+        "examples": [
+          "Proteção para quem mais importa.",
+          "Tudo sob o ponto de vista de quem faz seu negócio acontecer."
+        ]
+      },
+      {
+        "id": "F08_marco_evento",
+        "pattern": "[Substantivo] da [coisa].",
+        "examples": [
+          "Inauguração da nova loja.",
+          "Chegada da nova frota.",
+          "Lançamento da linha healthcare."
+        ],
+        "use": "T05 — tipografia gigante, anúncio de marco."
+      },
+      {
+        "id": "F09_quando_x",
+        "pattern": "Quando [condição extrema], [resposta da marca].",
+        "examples": [
+          "Quando parar não é opção.",
+          "Quando o catálogo não resolve, a gente desenvolve."
+        ]
+      }
+    ],
+    "support_lines": {
+      "purpose": "Linha menor sob a chamada, dá o contexto setorial.",
+      "examples": [
+        "Ambientes escolares merecem segurança total.",
+        "Tecnologia que prepara o ambiente para receber milhares de clientes com segurança.",
+        "Que entende o comportamento e previne perdas.",
+        "De quem faz o seu negócio acontecer."
+      ],
+      "rules": [
+        "Sempre minúscula inicial OU continuação natural do headline acima.",
+        "1 linha, no máximo 2.",
+        "Nunca repita a palavra-chave da headline."
+      ]
+    },
+    "lexicon_preferred": [
+      "tecnologia", "segurança", "proteção", "inovação", "controle", "comunicação", "engenharia",
+      "operação", "prevenção", "perda", "missão crítica", "tempo real", "auditável",
+      "inteligência", "monitoramento", "perímetro", "dignidade", "padrão", "padronizada"
+    ],
+    "lexicon_avoid": [
+      "soluções inteligentes", "transformação digital", "parceiro estratégico",
+      "excelência", "vanguarda", "sinergia", "robusto", "disruptivo", "incrível", "amazing"
+    ],
+    "caption_template": {
+      "structure": [
+        "Linha 1: Reformulação ou expansão da chamada do post (1 frase).",
+        "Linha 2 (opcional): Bullet curto explicando o quê / pra quem.",
+        "Linha 3: CTA — 'Fale com nossa equipe', link na bio, telefone, ou pergunta provocativa.",
+        "Hashtags: 4 a 7, sempre no fim, separadas do corpo por uma linha em branco."
+      ],
+      "examples": [
+        {
+          "post": "Tecnologia que protege em tempo real.",
+          "caption": "Cancela, leitor de placa e câmera analítica falando entre si — 24h por dia, sem operador no portão.\n\n→ Para condomínios, indústrias e varejo de grande porte.\n\nFale com nossa equipe: link na bio.\n\n#esiexata #segurança #cftv #controledeacesso #tecnologia #engenhariadeimagem #prevençãodeperdas"
+        }
+      ]
+    },
+    "hashtags": {
+      "core": ["#esiexata", "#grupoESI", "#segurançainteligente"],
+      "rotation_by_segment": {
+        "varejo": ["#prevençãodeperdas", "#varejo", "#cftv", "#analítico"],
+        "porto": ["#missãocrítica", "#portos", "#rádiodigital", "#dmr"],
+        "energia": ["#detecçãodegás", "#nr20", "#energia", "#segurançaindustrial"],
+        "agro": ["#agronegócio", "#esiagro", "#ruraltech"],
+        "healthcare": ["#healthcare", "#cuidadosénior", "#ilpi"],
+        "condomínio": ["#condomínio", "#controledeacesso", "#cftv"]
+      },
+      "rules": [
+        "Mínimo 4, máximo 7. Mais que isso parece spam.",
+        "Sempre #esiexata como primeira.",
+        "Nunca usar emoji nas hashtags."
+      ]
+    },
+    "cta_options": [
+      "Fale com um especialista — link na bio.",
+      "Quero um diagnóstico → link na bio.",
+      "(41) 3527 7007",
+      "contato@esiexata.com.br"
+    ]
+  },
+
+  "segments": [
+    { "id": "varejo",      "label": "Varejo",          "anchor_clients": ["Carrefour", "Atacadão", "Assaí", "C&A", "Riachuelo"], "subjects": ["loja", "PDV", "doca", "estoque", "centro logístico"] },
+    { "id": "porto",       "label": "Portuário",       "anchor_clients": ["Porto de Santos", "Porto de Chibatão"],                "subjects": ["pátio", "píer", "container", "rádio DMR"] },
+    { "id": "energia",     "label": "Energia & Gás",   "anchor_clients": ["Edge Gas"],                                            "subjects": ["dutos", "OGI", "perimetragem", "ambiente classificado"] },
+    { "id": "agro",        "label": "Agronegócio",     "anchor_clients": ["IMPASA", "ILS Agro"],                                  "subjects": ["silo", "lavoura", "rádio longo alcance", "totem autônomo"] },
+    { "id": "healthcare",  "label": "Healthcare",      "anchor_clients": [],                                                      "subjects": ["ILPI", "home care", "sensor de queda"] },
+    { "id": "condomínio",  "label": "Condomínio",      "anchor_clients": [],                                                      "subjects": ["portaria", "interfone", "câmera dome", "perímetro residencial"] },
+    { "id": "corporativo", "label": "Corporativo",     "anchor_clients": [],                                                      "subjects": ["central de monitoramento", "controle de acesso", "biometria"] }
+  ],
+
+  "automation_recipe": {
+    "input_required": [
+      "segment (id de segments[])",
+      "topic (string curta — ex: 'leitor biométrico', 'detecção de gás em planta')",
+      "hero_image_url",
+      "tone (default | urgente | celebrativo)"
+    ],
+    "step_1_pick_template": {
+      "default": "T01_centered_dark ou T02_bottom_dark",
+      "se_imagem_tem_grande_area_neutra_lateral": "T03_blob_lateral",
+      "se_marco_ou_evento": "T05_oversized_type",
+      "se_anuncio_de_segmentação_simples": "T04_split_color (raro)"
+    },
+    "step_2_generate_headline": {
+      "rule": "Pick uma das fórmulas F01–F09 alinhada ao tom. Default = F01 ou F05. Headline 2–6 palavras, fechar com '.' ou '!'.",
+      "tone_to_formula": {
+        "default":     ["F01", "F05", "F02"],
+        "urgente":     ["F03", "F09"],
+        "celebrativo": ["F08", "F04"]
+      }
+    },
+    "step_3_render": {
+      "headline": "Barlow Condensed Italic 800, branco #FFFFFF, line-height 0.92, letter-spacing -0.01em",
+      "scrim": "color.support_overlay.scrim_dark sobre a foto",
+      "logo": "lockup dual_esi_exata, bottom-center, altura 56–72px, clear-space 24px",
+      "graphic_device": "conforme template escolhido"
+    },
+    "step_4_caption": {
+      "use": "copy_system.caption_template",
+      "hashtag_set": "core + rotation_by_segment[segment] (4–7 total)"
+    }
+  },
+
+  "validation_checklist": [
+    "Headline em Barlow Condensed Italic 800 branco, com quebra de linha intencional?",
+    "Pontuação fechada (. ou !)?",
+    "Foto com scrim escuro garantindo legibilidade?",
+    "Logo no rodapé com clear-space mínimo?",
+    "Vermelho ESI usado APENAS em logo/seta-grafismo?",
+    "Sem emoji no criativo (legenda OK com moderação)?",
+    "Sem palavras-clichê do lexicon_avoid?",
+    "Headline ≤ 7 palavras?",
+    "Hashtags entre 4 e 7, com #esiexata em primeiro?"
+  ]
+}
