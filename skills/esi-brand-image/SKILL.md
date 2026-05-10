@@ -1,20 +1,56 @@
 ---
 name: esi-brand-image
 description: >
-  Gera posts visuais para Instagram seguindo a identidade visual ESI Exata.
-  Usa brand-spec.json como referência, OpenAI Image Generation API (gpt-image-1),
-  e aplica checklist de validacao automaticamente.
+  Gera posts visuais e artes promocionais seguindo a identidade visual ESI Exata.
+  Dois modos: (1) OpenAI gpt-image-1 para posts Instagram com fotos geradas,
+  (2) satori/@vercel/og para artes com logos PNG reais, fotos de produto e texto preciso.
+  Aplica checklist de validacao automaticamente.
 ---
 
 # ESI Brand Image — Skill de Geracao de Posts Visuais
 
-Gera imagens de posts para Instagram seguindo rigorosamente a identidade visual da ESI Exata.
+Gera imagens de posts e artes promocionais seguindo rigorosamente a identidade visual da ESI Exata.
 
 ## Quando usar
 
 - Quando pedirem para criar um post para Instagram da ESI Exata
 - Quando precisar gerar imagens que sigam a identidade visual da marca
 - Quando receber um briefing de conteudo com segmento, topico e tom
+- Quando precisar gerar arte promocional de produto (WhatsApp, catalogo, banner)
+- Quando a arte precisa de logo PNG real, foto de produto ou nome de produto
+
+## Dois modos de geracao
+
+### Modo 1 — OpenAI Image Generation (gpt-image-1)
+Para posts Instagram com fotos tematicas geradas por IA. Segue o pipeline descrito abaixo.
+
+### Modo 2 — Satori / @vercel/og (artes com assets reais)
+Para artes promocionais (WhatsApp, banners) que precisam de:
+- **Logos PNG reais** de `docs/brand/` (nao SVG generico)
+- **Fotos de produto** (path local ou URL)
+- **Nome do produto** na arte
+- **Texto preciso** (precos, telefones, CTAs)
+
+Use a biblioteca `scripts/lib/esi-brand-assets.js` que fornece:
+- `logos.horizontalNegativa` / `logos.horizontalPositiva` — data URIs dos logos reais
+- `logos.simbolo` — simbolo da seta ESI
+- `loadProductImage(pathOrUrl)` — carrega foto de produto como data URI
+- `footerElement(opts)` — footer pronto com logo PNG real
+- `productHeaderElement({productName, category})` — header com nome do produto
+- `productImageElement(dataUri, {width, height})` — imagem de produto centralizada
+- `colors` — paleta de cores ESI
+- `h(type, props, ...children)` — helper para construir arvores satori
+
+Script de exemplo: `scripts/gen-promo-produto.js`
+
+```bash
+node scripts/gen-promo-produto.js \
+  --name "Intelbras VHD 3120" \
+  --category "CAMERA DE SEGURANCA" \
+  --price "R$ 230,00" \
+  --image "./public/produtos/vhd3120.png" \
+  --output "./public/promo/vhd3120.png"
+```
 
 ## Referencia obrigatoria
 
@@ -30,6 +66,10 @@ Para gerar um post, voce precisa de:
 | `topic` | string | sim | Tema curto (ex: "leitor biometrico", "deteccao de gas em planta") |
 | `tone` | string | nao | `default` (padrao), `urgente`, ou `celebrativo` |
 | `hero_image_description` | string | nao | Descricao da foto hero desejada (se nao fornecida, gerar baseada no segmento) |
+| `product_name` | string | nao | Nome do produto para exibir na arte (ex: "Intelbras VHD 3120") |
+| `product_image` | string | nao | Path local ou URL da foto do produto |
+| `price` | string | nao | Preco para exibir na arte (ex: "R$ 230,00") |
+| `mode` | string | nao | `openai` (padrao para Instagram) ou `satori` (para artes com assets reais) |
 
 ## Pipeline de geracao
 

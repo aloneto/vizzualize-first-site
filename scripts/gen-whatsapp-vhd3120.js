@@ -9,6 +9,7 @@ const { ImageResponse } = require(
 );
 const fs = require('fs');
 const path = require('path');
+const { logos, colors, footerElement, h: _h } = require('./lib/esi-brand-assets');
 
 const fontRegular = fs.readFileSync(
   path.resolve(__dirname, '../node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf')
@@ -304,56 +305,8 @@ const element = h('div', {
     }
   }),
 
-  // ── Footer: ESI Exata logo lockup ──
-  h('div', {
-    style: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      padding: '18px 60px',
-      gap: 16,
-      flexShrink: 0,
-    }
-  },
-    // ESI triple arrows
-    h('div', {
-      style: {
-        display: 'flex',
-        flexDirection: 'row',
-        gap: 5,
-      }
-    },
-      h('div', { style: { width: 0, height: 0, borderTop: '11px solid transparent', borderBottom: '11px solid transparent', borderLeft: `20px solid ${ESI_RED}` } }),
-      h('div', { style: { width: 0, height: 0, borderTop: '11px solid transparent', borderBottom: '11px solid transparent', borderLeft: `20px solid ${ESI_RED}` } }),
-      h('div', { style: { width: 0, height: 0, borderTop: '11px solid transparent', borderBottom: '11px solid transparent', borderLeft: `20px solid ${ESI_RED}` } }),
-    ),
-    // wordmark
-    h('span', {
-      style: { fontSize: 22, fontWeight: 700, color: WHITE, letterSpacing: 2 }
-    }, 'esi'),
-    h('span', {
-      style: { fontSize: 22, fontWeight: 400, color: 'rgba(255,255,255,0.35)', margin: '0 2px' }
-    }, '|'),
-    h('span', {
-      style: { fontSize: 22, fontWeight: 700, color: WHITE, letterSpacing: 1 }
-    }, 'exata'),
-    // divider
-    h('div', { style: { width: 1.5, height: 28, background: 'rgba(255,255,255,0.25)', margin: '0 8px' } }),
-    // sub-brand
-    h('div', {
-      style: {
-        display: 'flex',
-        flexDirection: 'column',
-      }
-    },
-      h('span', {
-        style: { fontSize: 13, color: 'rgba(255,255,255,0.40)', letterSpacing: 1 }
-      }, 'esi · soluções integradas'),
-      h('span', {
-        style: { fontSize: 11, color: 'rgba(255,255,255,0.22)' }
-      }, 'Há 21 anos protegendo o que importa.')
-    )
-  ),
+  // ── Footer: ESI Exata logo real (PNG) ──
+  footerElement({ logoHeight: 52, padding: '18px 60px' }),
 
   // ── Red bottom bar ──
   h('div', { style: { width: '100%', height: 10, background: ESI_RED, flexShrink: 0 } }),
