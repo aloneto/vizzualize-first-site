@@ -7,7 +7,8 @@
  *
  * Produto: Kit NVS com 2 Bullets WiFi 2MP Hikvision
  * Código: 6942160474694
- * Preço de: R$1.818,08 → por: R$1.393,20 (23% OFF)
+ * Preço de: R$1.454,46 → por: R$1.114,56 (23% OFF)
+ * Margem: 1.6x sobre o custo (referência concorrente R$696,60 × 1.6)
  */
 const { ImageResponse } = require(
   'next/dist/compiled/@vercel/og/index.node.js'
@@ -488,7 +489,7 @@ const element = h('div', {
                   fontWeight: 500,
                   textDecoration: 'line-through',
                 }
-              }, 'R$1.818,08')
+              }, 'R$1.454,46')
             ),
 
             // "por" price
@@ -500,8 +501,8 @@ const element = h('div', {
                 style: { display: 'flex', flexDirection: 'row', alignItems: 'baseline' }
               },
                 h('span', { style: { fontSize: 28, fontWeight: 700, color: INK, marginRight: 2 } }, 'R$'),
-                h('span', { style: { fontSize: 64, fontWeight: 700, color: INK, letterSpacing: -2, lineHeight: 1 } }, '1.393'),
-                h('span', { style: { fontSize: 32, fontWeight: 700, color: INK, alignSelf: 'flex-start', marginTop: 8 } }, ',20')
+                h('span', { style: { fontSize: 64, fontWeight: 700, color: INK, letterSpacing: -2, lineHeight: 1 } }, '1.114'),
+                h('span', { style: { fontSize: 32, fontWeight: 700, color: INK, alignSelf: 'flex-start', marginTop: 8 } }, ',56')
               )
             )
           ),
