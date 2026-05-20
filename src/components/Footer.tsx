@@ -46,7 +46,7 @@ export function Footer({ siteName = "ESI Exata" }: FooterProps) {
           <div className="md:col-span-1">
             <Link href="/" aria-label={siteName}>
               <Image
-                src="/logos/esi-exata-logo-light.svg"
+                src="/logos/esi-exata-logo-dark.svg"
                 alt={siteName}
                 width={110}
                 height={26}

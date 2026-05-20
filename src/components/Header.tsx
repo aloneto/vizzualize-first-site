@@ -21,7 +21,7 @@ export function Header({ siteName = "ESI Exata", navigation = [] }: HeaderProps)
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label={siteName}>
           <Image
-            src="/logos/esi-exata-logo-light.svg"
+            src="/logos/esi-exata-logo-dark.svg"
             alt={siteName}
             width={120}
             height={28}
