@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * Gera imagem WhatsApp promocional — Intelbras VHD 3120 (R$230)
+ * Gera imagem WhatsApp promocional — Intelbras VHD 3120 (R$300)
  * Usa @vercel/og (satori + resvg) para renderizar HTML com texto correto.
  * Identidade visual ESI Exata (brand-spec.json).
- * v2: foto real do produto gerada via gpt-image-1
+ * v3: preco R$300, CTA URL landing page
  */
 const { ImageResponse } = require(
   'next/dist/compiled/@vercel/og/index.node.js'
@@ -16,9 +16,9 @@ const fontRegular = fs.readFileSync(
   path.resolve(__dirname, '../node_modules/next/dist/compiled/@vercel/og/Geist-Regular.ttf')
 );
 
-// 1080x1080 square — ideal WhatsApp format
+// 1080x1350 — formato WhatsApp/Instagram feed (4:5)
 const W = 1080;
-const H = 1080;
+const H = 1350;
 
 // Brand colors
 const ESI_RED = '#E11D2A';
@@ -176,49 +176,28 @@ const element = h('div', {
         }, 'PREÇO ESPECIAL'),
         h('span', {
           style: { fontSize: 52, fontWeight: 700, color: WHITE, letterSpacing: -1.5, lineHeight: 1 }
-        }, 'R$ 230,00')
+        }, 'R$300')
       ),
 
-      // WhatsApp CTA
+      // URL CTA
       h('div', {
         style: {
           display: 'flex',
           flexDirection: 'column',
           gap: 4,
+          flex: 1,
+          justifyContent: 'center',
         }
       },
-        h('div', {
-          style: {
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: 10,
-          }
-        },
-          h('div', {
-            style: {
-              display: 'flex',
-              width: 36,
-              height: 36,
-              borderRadius: '50%',
-              background: '#25D366',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
-            }
-          },
-            h('span', { style: { fontSize: 18, fontWeight: 700, color: WHITE } }, 'W')
-          ),
-          h('span', {
-            style: { fontSize: 13, fontWeight: 700, color: WHITE_70, letterSpacing: 1 }
-          }, 'ENTRE EM CONTATO')
-        ),
         h('span', {
-          style: { fontSize: 34, fontWeight: 700, color: WHITE, letterSpacing: 0, lineHeight: 1 }
-        }, '(041) 99151-9622'),
+          style: { fontSize: 13, fontWeight: 700, color: WHITE_70, letterSpacing: 1, marginBottom: 4 }
+        }, 'SAIBA MAIS'),
         h('span', {
-          style: { fontSize: 13, color: WHITE_50, marginTop: 2 }
-        }, 'wa.me/5541991519622')
+          style: { fontSize: 18, fontWeight: 500, color: WHITE, letterSpacing: 0, lineHeight: 1.3 }
+        }, 'projeto-interno-teste'),
+        h('span', {
+          style: { fontSize: 18, fontWeight: 500, color: WHITE, letterSpacing: 0, lineHeight: 1.3 }
+        }, '.vercel.app/promo/vhd3120')
       )
     )
   ),
