@@ -1,62 +1,81 @@
 type EsiExataLogoProps = {
   variant?: "dark" | "light";
+  showTagline?: boolean;
   className?: string;
 };
 
 /**
- * Inline SVG logo for ESI Exata.
- * - "dark" variant: white text, for dark backgrounds (header/footer)
- * - "light" variant: dark text, for light backgrounds
+ * Inline SVG logo for ESI Exata — matches official brand identity.
+ * - "dark" variant: white/red on dark backgrounds (header/footer)
+ * - "light" variant: navy/red on light backgrounds
  */
-export function EsiExataLogo({ variant = "dark", className = "" }: EsiExataLogoProps) {
-  const textFill = variant === "dark" ? "#FFFFFF" : "#0d1117";
+export function EsiExataLogo({ variant = "dark", showTagline = false, className = "" }: EsiExataLogoProps) {
+  const navy = variant === "dark" ? "#FFFFFF" : "#1B1F3B";
+  const red = "#E21219";
+  const taglineColor = variant === "dark" ? "#9CA3AF" : "#6B7280";
+  const h = showTagline ? 52 : 40;
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 220 48"
+      viewBox={`0 0 220 ${h}`}
       fill="none"
       aria-label="ESI Exata"
       className={className}
     >
-      {/* Icon mark: stylized E circuit node */}
-      <g transform="translate(0,4)">
-        <rect x="0" y="0" width="4" height="40" fill="#E21219" />
-        <rect x="0" y="0" width="24" height="4" fill="#E21219" />
-        <rect x="0" y="18" width="18" height="4" fill="#E21219" />
-        <rect x="0" y="36" width="24" height="4" fill="#E21219" />
-        <circle cx="24" cy="2" r="3" fill="#E21219" />
-        <circle cx="18" cy="20" r="3" fill="#1FA9E6" />
-        <circle cx="24" cy="38" r="3" fill="#E21219" />
-        <circle cx="31" cy="20" r="2" fill="#1FA9E6" opacity="0.6" />
-        <line x1="24" y1="20" x2="35" y2="20" stroke="#1FA9E6" strokeWidth="1.5" opacity="0.4" />
+      {/* Geometric "e" mark — angular chevron with 3 horizontal prongs */}
+      <g transform="translate(0,2)">
+        {/* Top prong (navy) */}
+        <polygon points="0,18 13,4 36,4 36,9 16,9 5,18" fill={navy} />
+        {/* Middle prong (red) */}
+        <polygon points="5,16 28,16 28,21 5,21" fill={red} />
+        {/* Bottom prong (navy) */}
+        <polygon points="0,19 13,33 36,33 36,28 16,28 5,19" fill={navy} />
       </g>
-      {/* Wordmark: ESI */}
+
+      {/* "si" text — regular weight, follows the geometric "e" */}
       <text
-        x="44"
-        y="32"
+        x="40"
+        y="30"
+        fontFamily="var(--font-sora), Sora, system-ui, sans-serif"
+        fontWeight="400"
+        fontSize="22"
+        fill={navy}
+        letterSpacing="0"
+      >
+        si
+      </text>
+
+      {/* Red separator bar */}
+      <rect x="68" y="8" width="2.5" height="24" fill={red} rx="1" />
+
+      {/* "exata" text — bold */}
+      <text
+        x="78"
+        y="30"
         fontFamily="var(--font-sora), Sora, system-ui, sans-serif"
         fontWeight="700"
         fontSize="22"
-        fill={textFill}
-        letterSpacing="-0.5"
-      >
-        ESI
-      </text>
-      {/* Separator pipe */}
-      <rect x="95" y="10" width="2" height="28" fill="#E21219" rx="1" />
-      {/* Wordmark: exata */}
-      <text
-        x="103"
-        y="32"
-        fontFamily="var(--font-sora), Sora, system-ui, sans-serif"
-        fontWeight="300"
-        fontSize="22"
-        fill={textFill}
-        letterSpacing="1"
+        fill={navy}
+        letterSpacing="0.5"
       >
         exata
       </text>
+
+      {/* Tagline */}
+      {showTagline && (
+        <text
+          x="40"
+          y="47"
+          fontFamily="var(--font-sora), Sora, system-ui, sans-serif"
+          fontWeight="400"
+          fontSize="8"
+          fill={taglineColor}
+          letterSpacing="1.5"
+        >
+          Soluções Integradas
+        </text>
+      )}
     </svg>
   );
 }
