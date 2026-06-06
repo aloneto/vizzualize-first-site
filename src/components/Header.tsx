@@ -20,7 +20,7 @@ export function Header({ siteName = "ESI Exata", navigation = [] }: HeaderProps)
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label={siteName}>
-          <Image src="/logos/esi-exata-logo-oficial-dark.png" alt="ESI Exata" width={140} height={28} className="h-7 w-auto" />
+          <Image src="/logos/esi-exata-logo-oficial-light.png" alt="ESI Exata" width={271} height={68} className="h-7 w-auto brightness-0 invert" />
         </Link>
 
         {/* Nav — desktop */}

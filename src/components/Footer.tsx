@@ -45,7 +45,7 @@ export function Footer({ siteName = "ESI Exata" }: FooterProps) {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" aria-label={siteName}>
-              <Image src="/logos/esi-exata-logo-oficial-dark.png" alt="ESI Exata" width={120} height={24} className="h-6 w-auto mb-4" />
+              <Image src="/logos/esi-exata-logo-oficial-light.png" alt="ESI Exata" width={271} height={68} className="h-6 w-auto mb-4 brightness-0 invert" />
             </Link>
             <p className="text-xs text-[var(--color-gray-500)] leading-relaxed max-w-[180px]">
               Soluções de segurança inteligente para os setores mais exigentes do Brasil.
