@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { EsiExataLogo } from "@/components/icons/EsiExataLogo";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
 type NavLink = { label: string; href: string };
@@ -20,7 +20,7 @@ export function Header({ siteName = "ESI Exata", navigation = [] }: HeaderProps)
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label={siteName}>
-          <EsiExataLogo variant="dark" className="h-7 w-auto" />
+          <Image src="/logos/esi-exata-logo-oficial-dark.png" alt="ESI Exata" width={140} height={28} className="h-7 w-auto" />
         </Link>
 
         {/* Nav — desktop */}
