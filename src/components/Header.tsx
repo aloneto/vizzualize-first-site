@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { EsiExataLogo } from "@/components/icons/EsiExataLogo";
 import { Container } from "@/components/ui/Container";
 
 type NavLink = { label: string; href: string };
@@ -20,14 +20,7 @@ export function Header({ siteName = "ESI Exata", navigation = [] }: HeaderProps)
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label={siteName}>
-          <Image
-            src="/logos/esi-exata-logo-dark.svg"
-            alt={siteName}
-            width={120}
-            height={28}
-            className="h-7 w-auto"
-            priority
-          />
+          <EsiExataLogo variant="dark" className="h-7 w-auto" />
         </Link>
 
         {/* Nav — desktop */}
