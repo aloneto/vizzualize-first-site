@@ -3,6 +3,8 @@ import { Sora, Inter, JetBrains_Mono, DM_Serif_Display, DM_Sans } from "next/fon
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Analytics, GtmNoscript } from "@/components/Analytics";
+import { CookieConsent } from "@/components/CookieConsent";
+import { TrackingEvents } from "@/components/TrackingEvents";
 import "./globals.css";
 
 const sora = Sora({
@@ -129,6 +131,8 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer siteName="ESI Exata" />
         <Analytics />
+        <TrackingEvents />
+        <CookieConsent />
       </body>
     </html>
   );
