@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, Inter, JetBrains_Mono, DM_Serif_Display, DM_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Analytics, GtmNoscript } from "@/components/Analytics";
 import "./globals.css";
 
 const sora = Sora({
@@ -123,9 +124,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-white text-[var(--color-ink)]">
+        <GtmNoscript />
         <Header siteName="ESI Exata" navigation={navigation} />
         <main className="flex-1">{children}</main>
         <Footer siteName="ESI Exata" />
+        <Analytics />
       </body>
     </html>
   );
