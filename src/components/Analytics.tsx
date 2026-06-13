@@ -64,11 +64,12 @@ fbq('track', 'PageView');`,
         />
       )}
 
-      {/* Microsoft Clarity */}
+      {/* Microsoft Clarity — beforeInteractive para capturar DOM desde o início
+         e evitar fallback para screenshots empilhadas nos replays */}
       {CLARITY_ID && (
         <Script
           id="clarity-script"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(c,l,a,r,i,t,y){
 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
