@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_MAX = 3;
@@ -73,8 +74,61 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Arquivo excede o limite de 5MB." }, { status: 400 });
   }
 
-  // Log submission (no PII in production logs — just confirmation)
-  console.log(`[candidatura] Nova candidatura recebida: ${new Date().toISOString()}`);
+  // Send email to RH
+  const smtpHost = process.env.SMTP_HOST;
+  const smtpPort = Number(process.env.SMTP_PORT ?? "587");
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  const rhEmail = process.env.RH_EMAIL ?? "rh@esiexata.com.br";
+
+  if (smtpHost && smtpUser && smtpPass) {
+    try {
+      const transporter = nodemailer.createTransport({
+        host: smtpHost,
+        port: smtpPort,
+        secure: smtpPort === 465,
+        auth: { user: smtpUser, pass: smtpPass },
+      });
+
+      const curriculoBuffer = Buffer.from(await curriculo.arrayBuffer());
+
+      await transporter.sendMail({
+        from: `"ESI Exata - Vagas" <${smtpUser}>`,
+        to: rhEmail,
+        replyTo: email,
+        subject: `Nova candidatura: Orçamentista Júnior — ${nome}`,
+        html: `
+          <h2>Nova candidatura recebida</h2>
+          <p><strong>Vaga:</strong> Orçamentista Júnior (CFTV/CA)</p>
+          <hr/>
+          <p><strong>Nome:</strong> ${nome}</p>
+          <p><strong>E-mail:</strong> ${email}</p>
+          <p><strong>Telefone:</strong> ${telefone}</p>
+          <p><strong>Cidade/Estado:</strong> ${cidadeEstado}</p>
+          ${linkedin ? `<p><strong>LinkedIn:</strong> ${linkedin}</p>` : ""}
+          <p><strong>Curso técnico:</strong> ${cursoTecnico}</p>
+          <p><strong>Experiência em orçamentação:</strong> ${experienciaOrcamentacao}</p>
+          ${pretensaoSalarial ? `<p><strong>Pretensão salarial:</strong> ${pretensaoSalarial}</p>` : ""}
+          ${mensagem ? `<p><strong>Mensagem:</strong> ${mensagem}</p>` : ""}
+          <hr/>
+          <p><em>Currículo em anexo.</em></p>
+        `,
+        attachments: [
+          {
+            filename: curriculo.name,
+            content: curriculoBuffer,
+          },
+        ],
+      });
+
+      console.log(`[candidatura] Email enviado para ${rhEmail}: ${new Date().toISOString()}`);
+    } catch (err) {
+      console.error("[candidatura] Erro ao enviar email:", err);
+      // Don't fail the submission if email fails — log and continue
+    }
+  } else {
+    console.log(`[candidatura] SMTP não configurado — candidatura registrada sem envio de email: ${new Date().toISOString()}`);
+  }
 
   return NextResponse.json({ success: true });
 }
