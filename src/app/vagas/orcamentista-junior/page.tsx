@@ -69,7 +69,7 @@ const WHATSAPP_MSG = encodeURIComponent("Olá! Vi a vaga de Orçamentista Júnio
 
 export default function VagaOrcamentistaJunior() {
   return (
-    <>
+    <div className="vagas-standalone">
       {/* Hero */}
       <section
         className="relative overflow-hidden py-20 md:py-28"
@@ -246,6 +246,25 @@ export default function VagaOrcamentistaJunior() {
           <path d="M16.004 2.003C8.27 2.003 2.008 8.264 2.008 15.997c0 2.467.648 4.876 1.88 6.998L2 30l7.213-1.846a13.934 13.934 0 006.79 1.75c7.734 0 13.997-6.262 13.997-13.996S23.738 2.003 16.004 2.003zm0 25.594a11.546 11.546 0 01-5.897-1.614l-.424-.252-4.38 1.123 1.14-4.278-.275-.44A11.56 11.56 0 014.41 15.997c0-6.394 5.2-11.594 11.594-11.594s11.594 5.2 11.594 11.594-5.2 11.6-11.594 11.6zm6.348-8.676c-.348-.174-2.06-1.017-2.38-1.133-.318-.117-.55-.174-.782.174-.233.348-.9 1.133-1.103 1.365-.204.233-.406.26-.754.087-.348-.174-1.47-.542-2.8-1.727-1.035-.922-1.733-2.06-1.936-2.408-.204-.348-.022-.536.153-.71.157-.156.348-.406.522-.61.174-.204.232-.348.348-.58.116-.232.058-.435-.03-.61-.087-.173-.782-1.884-1.07-2.58-.283-.68-.57-.588-.782-.598l-.666-.012c-.232 0-.61.087-.93.435-.318.348-1.218 1.19-1.218 2.902 0 1.712 1.247 3.366 1.42 3.598.174.232 2.454 3.748 5.946 5.256.83.36 1.48.574 1.987.735.835.266 1.594.228 2.195.138.67-.1 2.06-.842 2.35-1.655.29-.814.29-1.51.204-1.655-.087-.146-.32-.233-.667-.406z" />
         </svg>
       </a>
-    </>
+
+      {/* Footer simplificado */}
+      <footer className="border-t border-[var(--color-gray-800)] bg-[var(--color-ink)] text-white py-10">
+        <div className="max-w-[var(--max-width)] mx-auto px-4 flex flex-col items-center gap-6 text-center">
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-lg px-7 py-3 text-sm font-semibold text-white transition-colors hover:opacity-90"
+            style={{ background: "var(--color-red)" }}
+          >
+            Conheça mais sobre a empresa
+          </a>
+          <p className="text-xs text-[var(--color-gray-500)]">
+            ESI Exata — R. Jorge B. Crocetti, 231, Curitiba – PR
+          </p>
+          <p className="text-xs text-[var(--color-gray-600)]">
+            © {new Date().getFullYear()} ESI Exata. Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
   );
 }
