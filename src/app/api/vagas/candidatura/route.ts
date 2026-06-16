@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { writeFile, mkdir } from "fs/promises";
+import path from "path";
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_MAX = 3;
@@ -74,6 +76,44 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Arquivo excede o limite de 5MB." }, { status: 400 });
   }
 
+  // Save submission to /tmp
+  const curriculoBuffer = Buffer.from(await curriculo.arrayBuffer());
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const safeName = nome.replace(/[^a-zA-Z0-9À-ú]/g, "_").slice(0, 50);
+  const submissionDir = path.join("/tmp", "candidaturas", `${timestamp}_${safeName}`);
+
+  try {
+    await mkdir(submissionDir, { recursive: true });
+
+    const submissionData = {
+      timestamp: new Date().toISOString(),
+      nome,
+      email,
+      telefone,
+      cidadeEstado,
+      linkedin,
+      cursoTecnico,
+      experienciaOrcamentacao,
+      pretensaoSalarial,
+      mensagem,
+      curriculoFileName: curriculo.name,
+      curriculoSize: curriculo.size,
+    };
+
+    await writeFile(
+      path.join(submissionDir, "dados.json"),
+      JSON.stringify(submissionData, null, 2)
+    );
+    await writeFile(
+      path.join(submissionDir, curriculo.name),
+      curriculoBuffer
+    );
+
+    console.log(`[candidatura] Salvo em ${submissionDir}:`, JSON.stringify(submissionData));
+  } catch (err) {
+    console.error("[candidatura] Erro ao salvar em /tmp:", err);
+  }
+
   // Send email to RH
   const smtpHost = process.env.SMTP_HOST;
   const smtpPort = Number(process.env.SMTP_PORT ?? "587");
@@ -89,8 +129,6 @@ export async function POST(request: NextRequest) {
         secure: smtpPort === 465,
         auth: { user: smtpUser, pass: smtpPass },
       });
-
-      const curriculoBuffer = Buffer.from(await curriculo.arrayBuffer());
 
       await transporter.sendMail({
         from: `"ESI Exata - Vagas" <${smtpUser}>`,
