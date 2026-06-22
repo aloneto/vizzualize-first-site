@@ -1,7 +1,7 @@
 export function AgroHero() {
   const stats = [
     { value: "~140k ha", label: "sob monitoramento", sub: "clientes ativos em MT" }, // TODO: confirmar com cliente
-    { value: "60 km", label: "alcance rádio DMR", sub: "com repetidora Hytera" }, // TODO: confirmar com cliente
+    { value: "60 km", label: "alcance câmeras", sub: "com link de dados" }, // TODO: confirmar com cliente
     { value: "24/7", label: "operação remota", sub: "no NOC de Curitiba" }, // TODO: confirmar com cliente
     { value: "Sinop", label: "base operacional", sub: "no coração do agro" },
   ];

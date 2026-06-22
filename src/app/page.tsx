@@ -22,7 +22,7 @@ export default function Home() {
         badge="C&A · Riachuelo · Atacadão · Assaí · Porto de Santos · Porto de Chibatão · Edge Gas · IMPASA · ILS Agro"
         heading="Segurança evita problemas antes deles acontecerem."
         highlightWord="antes"
-        subheading="A engenharia de imagem, comunicação crítica e prevenção de perdas por trás das maiores operações de varejo, porto, energia e agro do Brasil. Há 21 anos."
+        subheading="A engenharia de imagem, detecção térmica e prevenção de perdas por trás das maiores operações de varejo, porto, energia e agro do Brasil. Há 21 anos."
         ctaPrimary="Quero um diagnóstico"
         ctaPrimaryLink="#contato"
         ctaSecondary="Comprar na ESI Store"
@@ -68,7 +68,7 @@ export default function Home() {
             name: "Varejo",
             kicker: "Eixo principal · Grandes redes",
             headline: "Prevenção de perdas em escala nacional.",
-            desc: "CFTV integrado com analítico, controle de acesso e rádio digital em centenas de lojas. Operação padronizada, centralizada e auditável — do hipermercado ao centro de distribuição.",
+            desc: "CFTV integrado com analítico e controle de acesso em centenas de lojas. Operação padronizada, centralizada e auditável — do hipermercado ao centro de distribuição.",
             clients: ["Assaí", "Atacadão", "C&A", "Riachuelo"],
             image: "/photos/varejo.jpg",
           },
@@ -77,7 +77,7 @@ export default function Home() {
             name: "Portuário",
             kicker: "Ambientes de missão crítica",
             headline: "Quando parar não é opção.",
-            desc: "Imagem em ambiente salino, controle de pátio e rádio digital para os principais portos do Brasil. Operação ininterrupta certificada, cobertura 24/7.",
+            desc: "Imagem em ambiente salino, controle de pátio e vistoria de containers com câmeras térmicas e laser. Operação ininterrupta certificada, cobertura 24/7.",
             clients: ["Porto de Santos", "Porto de Chibatão"],
             image: "/photos/porto.jpg",
           },
@@ -86,7 +86,7 @@ export default function Home() {
             name: "Energia & Gás",
             kicker: "Detecção precoce",
             headline: "Ver o invisível antes que ele vaze.",
-            desc: "Câmeras de detecção óptica de gás (OGI), perimetragem e rádio intrinsecamente seguro para distribuição de GLP e ambientes classificados.",
+            desc: "Detecção laser de partículas explosivas e câmeras EX para ambientes classificados.",
             clients: ["Edge Gas"],
             image: "/photos/energia.jpg",
           },
@@ -95,7 +95,7 @@ export default function Home() {
             name: "Agronegócio",
             kicker: "Filial ESI Agro · Sinop MT",
             headline: "Engenharia no coração do campo.",
-            desc: "Rádio de longo alcance para safra, vigilância de silos e cerealistas, IA embarcada em áreas abertas. Time dedicado instalado em Sinop.",
+            desc: "Vigilância de silos e cerealistas com câmeras térmicas, IA embarcada em áreas abertas. Time dedicado instalado em Sinop.",
             clients: ["IMPASA", "ILS Agro"],
             image: "/photos/agro.jpg",
           },
@@ -131,16 +131,16 @@ export default function Home() {
             ],
           },
           {
-            kicker: "COMUNICAÇÃO",
-            title: "Rádio Corporativo",
+            kicker: "IMAGEM TÉRMICA",
+            title: "Câmeras Térmicas & Laser",
             description:
-              "Redes de rádio digital (DMR) para comunicação de missão crítica. Cobertura total do perímetro, criptografia e integração com plataformas de despacho e PTT.",
-            iconSrc: "/icons/solutions/icon-radio-hytera.svg",
+              "Câmeras térmicas e laser para detecção precoce de riscos em ambientes industriais e classificados. Monitoramento contínuo de temperatura, vazamentos e anomalias sem contato.",
+            iconSrc: "/icons/solutions/icon-cftv.svg",
             features: [
-              "Tecnologia DMR digital",
-              "Cobertura multi-site",
-              "Criptografia AES-256",
-              "Integração com PTT e despacho",
+              "Câmeras térmicas de alta precisão",
+              "Detecção laser de partículas",
+              "Monitoramento 24/7 sem contato",
+              "Integração com alarmes e dashboards",
             ],
           },
           {
@@ -157,16 +157,16 @@ export default function Home() {
             ],
           },
           {
-            kicker: "SEGURANÇA INDUSTRIAL",
-            title: "Detecção de Gás",
+            kicker: "SUBESTAÇÃO",
+            title: "Câmera Microfônica",
             description:
-              "Sistemas fixos e portáteis para monitoramento de gases tóxicos e explosivos em ambientes industriais. Alertas em tempo real, conformidade NR-20 e integração com sistemas de emergência.",
-            iconSrc: "/icons/solutions/icon-deteccao-gas.svg",
+              "Câmera microfônica para detecção de ruídos de fuga e energia em subestações. Monitoramento acústico contínuo que identifica falhas antes que se tornem incidentes críticos.",
+            iconSrc: "/icons/solutions/icon-cftv.svg",
             features: [
-              "Sensores fixos e portáteis",
-              "Detecção multi-gás e ponto único",
-              "Conformidade NR-20 / NR-33",
-              "Integração com SCADA e alarmes",
+              "Detecção acústica de falhas",
+              "Monitoramento contínuo de subestações",
+              "Alertas preditivos em tempo real",
+              "Integração com sistemas de manutenção",
             ],
           },
         ]}
@@ -191,9 +191,9 @@ export default function Home() {
             ],
           },
           {
-            title: "Porto amplia cobertura de segurança com rádio digital",
+            title: "Porto amplia vistoria de containers com tecnologia térmica",
             excerpt:
-              "Upgrade de comunicação analógica para DMR com cobertura integral do pátio e píer. Eliminação de pontos cegos e redução do tempo de resposta a incidentes.",
+              "Implantação de câmeras térmicas e laser para vistoria automatizada de containers. Eliminação de pontos cegos e redução do tempo de resposta a incidentes.",
             imageSrc: "/photos/case-porto.jpg",
             sector: "Portos",
             sectorColor: "var(--color-tech)",
@@ -203,15 +203,15 @@ export default function Home() {
             ],
           },
           {
-            title: "Planta industrial elimina falsos alarmes com detecção de gás inteligente",
+            title: "Planta industrial adota câmeras térmicas para detecção precoce",
             excerpt:
-              "Substituição de sistema legado por solução integrada com sensores multi-gás e IA de filtragem. Conformidade NR-20 atingida no prazo.",
+              "Implantação de câmeras térmicas e laser para monitoramento contínuo de ambientes classificados. Detecção precoce de anomalias sem contato.",
             imageSrc: "/photos/case-energia.jpg",
             sector: "Energia",
             sectorColor: "var(--color-store)",
             kpis: [
-              { value: "0", label: "Falsos alarmes" },
-              { value: "NR-20", label: "Certificada" },
+              { value: "24/7", label: "Monitoramento" },
+              { value: "0", label: "Falhas não detectadas" },
             ],
           },
         ]}
@@ -225,13 +225,13 @@ export default function Home() {
         kicker="esi | p&d · engenharia customizada"
         heading="Quando o catálogo não resolve, a gente desenvolve."
         highlight="a gente desenvolve"
-        subheading="Hardware, firmware, integração SCADA, analítico de borda, adaptação para ambientes classificados. Se o que você precisa não existe, nós projetamos."
+        subheading="Hardware, firmware, analítico de borda, adaptação para ambientes classificados. Se o que você precisa não existe, nós projetamos."
         ctaPrimary="Traga o seu desafio"
         ctaPrimaryHref="#contato"
         ctaSecondary="Ver projetos P&D"
         ctaSecondaryHref="#pd"
         pillars={[
-          { t: "Integração SCADA",     d: "de sistemas proprietários que nenhum integrador quis tocar" },
+          { t: "Integração de sistemas", d: "conectamos plataformas proprietárias que nenhum integrador quis tocar" },
           { t: "Hardware sob medida",  d: "placas, gateways e suportes para ambientes atípicos" },
           { t: "Firmware customizado", d: "comportamentos específicos da sua operação, não do fabricante" },
           { t: "Analítico de borda",   d: "modelos de IA treinados com o seu dado, na sua realidade" },
@@ -242,11 +242,10 @@ export default function Home() {
       <Store
         kicker="ESI STORE"
         heading="Tecnologia de ponta. Disponível agora."
-        subheading="Câmeras, rádios, sensores e acessórios — com suporte técnico ESI Exata."
+        subheading="Câmeras, sensores térmicos, laser e acessórios — com suporte técnico ESI Exata."
         categories={[
           { name: "Câmeras IP & Analógicas" },
-          { name: "Rádios Digitais DMR" },
-          { name: "Detectores de Gás" },
+          { name: "Câmeras Térmicas & Laser" },
           { name: "Bodycams" },
           { name: "Acessórios e Insumos" },
         ]}

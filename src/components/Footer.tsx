@@ -5,9 +5,9 @@ import { Container } from "@/components/ui/Container";
 const footerLinks = {
   Soluções: [
     { label: "Monitoramento por Vídeo", href: "#solucoes" },
-    { label: "Rádio Corporativo", href: "#solucoes" },
+    { label: "Câmeras Térmicas & Laser", href: "#solucoes" },
     { label: "Inteligência Artificial", href: "#solucoes" },
-    { label: "Detecção de Gás", href: "#solucoes" },
+    { label: "Câmera Microfônica", href: "#solucoes" },
     { label: "Bodycam", href: "#solucoes" },
     { label: "Integra", href: "#solucoes" },
   ],

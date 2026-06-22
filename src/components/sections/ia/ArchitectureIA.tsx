@@ -4,7 +4,7 @@ const BLOCKS = [
   { t: "Câmeras",      d: "IP, analógicas, térmicas — qualquer marca" },
   { t: "DVR/NVR + IA", d: "Inferência na borda, on-prem" },
   { t: "VMS / ERP",    d: "Integração com seu software de gestão" },
-  { t: "Alertas",      d: "WhatsApp, e-mail, SCADA, painel ESI" },
+  { t: "Alertas",      d: "WhatsApp, e-mail, painel ESI" },
 ];
 
 export function ArchitectureIA() {

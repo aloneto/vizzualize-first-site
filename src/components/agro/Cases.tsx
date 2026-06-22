@@ -3,11 +3,11 @@ const cases = [
   {
     location: "SORRISO · MT",
     type: "Soja & milho",
-    headline: "Cobertura de rádio DMR em 42 mil hectares",
-    desc: "2 repetidoras Hytera DMR III · 380 terminais · safras 22/23, 23/24, 24/25.",
+    headline: "Monitoramento térmico em 42 mil hectares",
+    desc: "Câmeras térmicas e IA embarcada · cobertura total · safras 22/23, 23/24, 24/25.",
     kpis: [
       { value: "42k ha", label: "cobertos" },
-      { value: "380", label: "rádios" },
+      { value: "24/7", label: "monitoramento" },
       { value: "60km", label: "alcance" },
     ],
   },

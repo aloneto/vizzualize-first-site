@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     template: "%s | ESI Exata",
   },
   description:
-    "20 anos integrando câmeras, rádios, inteligência artificial e detecção de gás para eliminar perdas. Soluções sob medida para varejo, portos, energia, agronegócio e healthcare.",
+    "20 anos integrando câmeras, inteligência artificial e detecção térmica para eliminar perdas. Soluções sob medida para varejo, portos, energia, agronegócio e healthcare.",
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",
@@ -57,14 +57,14 @@ export const metadata: Metadata = {
     siteName: "ESI Exata",
     title: "ESI Exata | Segurança, CFTV e IA para Varejo, Portos e Indústria",
     description:
-      "20 anos integrando câmeras, rádios, inteligência artificial e detecção de gás para eliminar perdas. Soluções sob medida para varejo, portos, energia, agronegócio e healthcare.",
+      "20 anos integrando câmeras, inteligência artificial e detecção térmica para eliminar perdas. Soluções sob medida para varejo, portos, energia, agronegócio e healthcare.",
     images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "ESI Exata — Segurança e Inteligência Operacional" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ESI Exata | Segurança, CFTV e IA para Varejo, Portos e Indústria",
     description:
-      "20 anos integrando câmeras, rádios, inteligência artificial e detecção de gás para eliminar perdas.",
+      "20 anos integrando câmeras, inteligência artificial e detecção térmica para eliminar perdas.",
     images: ["/og-image.svg"],
   },
   robots: {
@@ -83,7 +83,7 @@ const jsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/logos/esi-exata-logo-light.svg`,
   description:
-    "20 anos integrando câmeras, rádios, inteligência artificial e detecção de gás para eliminar perdas em varejo, portos, energia, agronegócio e healthcare.",
+    "20 anos integrando câmeras, inteligência artificial e detecção térmica para eliminar perdas em varejo, portos, energia, agronegócio e healthcare.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "R. Jorge B. Crocetti, 231",
