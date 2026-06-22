@@ -5,7 +5,7 @@ const clients = [
   { name: 'Carrefour', category: 'Varejo', logo: '/logos/clients/carrefour.png' },
   { name: 'Atacadão', category: 'Varejo', logo: '/logos/clients/atacadao.png' },
   { name: 'Assaí', category: 'Varejo', logo: '/logos/clients/assai.png' },
-  { name: 'Porto de Santos', category: 'Portuário', logo: '/logos/clients/porto-santos.png' },
+  { name: 'Santos Brasil', category: 'Portuário', logo: '/logos/clients/santos-brasil.svg' },
   { name: 'Porto de Chibatão', category: 'Portuário', logo: '/logos/clients/porto-chibatao.png' },
   { name: 'Edge Gas', category: 'Energia', logo: '/logos/clients/edge-gas.png' },
   { name: 'Inpasa', category: 'Agronegócio', logo: '/logos/clients/inpasa.png' },

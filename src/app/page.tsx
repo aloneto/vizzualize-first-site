@@ -19,7 +19,7 @@ export default function Home() {
 
       {/* 2. Hero — Headline, stats, CTAs */}
       <Hero
-        badge="C&A · Riachuelo · Atacadão · Assaí · Porto de Santos · Porto de Chibatão · Edge Gas · IMPASA · ILS Agro"
+        badge="C&A · Riachuelo · Atacadão · Assaí · Santos Brasil · Porto de Chibatão · Edge Gas · IMPASA · ILS Agro"
         heading="Segurança evita problemas antes deles acontecerem."
         highlightWord="antes"
         subheading="A engenharia de imagem, detecção térmica e prevenção de perdas por trás das maiores operações de varejo, porto, energia e agro do Brasil. Há 21 anos."
@@ -78,7 +78,7 @@ export default function Home() {
             kicker: "Ambientes de missão crítica",
             headline: "Quando parar não é opção.",
             desc: "Imagem em ambiente salino, controle de pátio e vistoria de containers com câmeras térmicas e laser. Operação ininterrupta certificada, cobertura 24/7.",
-            clients: ["Porto de Santos", "Porto de Chibatão"],
+            clients: ["Santos Brasil", "Porto de Chibatão"],
             image: "/photos/porto.jpg",
           },
           {
