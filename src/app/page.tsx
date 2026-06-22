@@ -191,9 +191,9 @@ export default function Home() {
             ],
           },
           {
-            title: "Porto amplia vistoria de containers com tecnologia térmica",
+            title: "Porto automatiza leitura de containers com câmeras OCR",
             excerpt:
-              "Implantação de câmeras térmicas e laser para vistoria automatizada de containers. Eliminação de pontos cegos e redução do tempo de resposta a incidentes.",
+              "Implantação de câmeras de leitura OCR para identificação automatizada de containers. Eliminação de pontos cegos e redução do tempo de resposta a incidentes.",
             imageSrc: "/photos/case-porto.jpg",
             sector: "Portos",
             sectorColor: "var(--color-tech)",
