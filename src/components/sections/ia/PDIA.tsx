@@ -16,7 +16,7 @@ export function PDIA() {
         </h2>
         <p className="text-lg opacity-80 max-w-[740px] leading-[1.55] mb-10">
           Detectar uma peça específica em uma esteira. Reconhecer um padrão de
-          avaria em contêiner. Identificar um SKU específico no carrinho. Casos
+          avaria em contêiner. Identificar um SKU específico. Casos
           que nenhum catálogo cobre. Aí entra a equipe de P&D.
         </p>
         <div className="flex gap-3 flex-wrap">

@@ -18,7 +18,7 @@ export function CTA({ heading, sub }: CTAProps) {
           {sub}
         </p>
         <Button variant="tech" size="lg" asChild>
-          <Link href="/contato?tema=ia">Falar com engenheiro ESI →</Link>
+          <Link href="/contato?tema=ia">Falar com a ESI →</Link>
         </Button>
       </Container>
     </section>

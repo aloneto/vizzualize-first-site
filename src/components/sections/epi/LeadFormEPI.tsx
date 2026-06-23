@@ -71,7 +71,7 @@ export function LeadFormEPI() {
           Cadastro recebido!
         </p>
         <p className="mt-2 text-sm text-[var(--color-gray-400)]">
-          Nossa equipe de engenharia entrará em contato em até 1 dia útil.
+          Nossa equipe de engenharia entrará em contato em até 3 dias útil.
         </p>
       </div>
     );
@@ -83,7 +83,7 @@ export function LeadFormEPI() {
         Solicite uma demonstração
       </h3>
       <p className="text-sm text-[var(--color-gray-400)] mb-6">
-        Preencha os dados e retornaremos em até 1 dia útil.
+        Preencha os dados e retornaremos em até 3 dias útil.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         <div className="grid sm:grid-cols-2 gap-4">

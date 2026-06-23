@@ -43,7 +43,7 @@ export function AgroSpotlight() {
               className="text-base text-white opacity-80 max-w-[480px] mb-6"
               style={{ fontFamily: "var(--font-agro-body), sans-serif" }}
             >
-              Filial em Sinop/MT com soluções dedicadas: totem autônomo,
+              Filial em Sinop/MT com soluções dedicadas: totem Inteligente,
               unidade móvel, IA treinada pro campo.
             </p>
             <a

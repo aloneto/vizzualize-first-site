@@ -9,7 +9,7 @@ const APPROACH = [
   {
     n: "02",
     t: "Treino dirigido",
-    d: "Coletamos amostras do seu vídeo real, anotamos manualmente e treinamos um modelo dedicado. Em 4–8 semanas, está em produção.",
+    d: "Coletamos amostras do seu vídeo real, anotamos manualmente e treinamos um modelo dedicado. Em 8–12 semanas, está em produção.",
   },
   {
     n: "03",

@@ -19,7 +19,7 @@ export default function Home() {
 
       {/* 2. Hero — Headline, stats, CTAs */}
       <Hero
-        badge="C&A · Riachuelo · Atacadão · Assaí · Santos Brasil · Porto de Chibatão · Edge Gas · IMPASA · ILS Agro"
+        badge="C&A · Riachuelo · Atacadão · Assaí · Santos Brasil · Porto de Chibatão · Edge Gas · IMPASA · ILS"
         heading="Segurança evita problemas antes deles acontecerem."
         highlightWord="antes"
         subheading="A engenharia de imagem, detecção térmica e prevenção de perdas por trás das maiores operações de varejo, porto, energia e agro do Brasil. Há 21 anos."
@@ -77,7 +77,7 @@ export default function Home() {
             name: "Portuário",
             kicker: "Ambientes de missão crítica",
             headline: "Quando parar não é opção.",
-            desc: "Imagem em ambiente salino, controle de pátio e vistoria de containers com câmeras térmicas e laser. Operação ininterrupta certificada, cobertura 24/7.",
+            desc: "Imagem em ambientes explosivos, controle de pátio e vistoria de containers com câmeras de OCR e laser. Operação ininterrupta certificada, cobertura 24/7.",
             clients: ["Santos Brasil", "Porto de Chibatão"],
             image: "/photos/porto.jpg",
           },
@@ -104,7 +104,7 @@ export default function Home() {
             name: "Healthcare",
             kicker: "Linha nova · 2025",
             headline: "Cuidado que respeita a dignidade.",
-            desc: "Sensores de detecção de queda para ILPI e home care. Monitoramento não-invasivo de quartos — alerta em segundos, sem câmera no ambiente privado.",
+            desc: "Sensores de detecção de queda para casas de cuidado com idosos ILPI e home care. Monitoramento não-invasivo de quartos — alerta em segundos, sem câmera no ambiente privado.",
             clients: ["Em expansão"],
             image: "/photos/healthcare.jpg",
           },
@@ -147,7 +147,7 @@ export default function Home() {
             kicker: "IA",
             title: "Inteligência Artificial",
             description:
-              "Algoritmos de visão computacional treinados para os padrões comportamentais de cada setor. Análise contínua sem intervenção humana — da detecção de irregularidades ao reconhecimento de padrões de risco.",
+              "Algoritmos de visão computacional treinados para os padrões especificos de cada setor. Análise contínua sem intervenção humana — da detecção de irregularidades ao reconhecimento de padrões de risco.",
             iconSrc: "/icons/solutions/icon-ia-embarcada.svg",
             features: [
               "Visão computacional embarcada",

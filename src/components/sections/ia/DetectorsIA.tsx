@@ -8,7 +8,7 @@ const DETECTORS = [
     items: [
       { t: "Leitura de placas e contêineres",   d: "OCR de chassis, BIC code e placas em ângulos extremos, com chuva ou sol contra" },
       { t: "Identificação de carga atípica",    d: "Detecta cargas fora do padrão (volume, formato, vazamento aparente)" },
-      { t: "Tracking de equipamento",            d: "Reach stackers, RTGs e empilhadeiras geolocalizados por câmera" },
+      { t: "Tracking de equipamento",            d: "Reach stackers, RTGs e empilhadeiras geolocalizados por GPS" },
       { t: "Perimetria inteligente",             d: "Distinção entre pessoa, animal e objeto — zero falso alarme noturno" },
     ],
   },
@@ -31,7 +31,7 @@ const DETECTORS = [
       { t: "EPI e NR-12",                       d: "Capacete, luva, óculos, cinto — alerta no instante da omissão" },
       { t: "Detecção de vazamento e fumaça",    d: "Visão térmica + IA para gases invisíveis e princípio de incêndio" },
       { t: "Aproximação a zona perigosa",       d: "Zonas virtuais ao redor de prensas, esteiras e robôs colaborativos" },
-      { t: "Postura ergonômica e queda",        d: "Detecção de quedas em altura e posturas de risco para ginástica laboral" },
+      { t: "Postura ergonômica e queda",        d: "Detecção de quedas em altura e posturas de risco" },
     ],
   },
 ];

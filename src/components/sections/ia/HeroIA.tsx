@@ -37,7 +37,7 @@ export function HeroIA() {
             className="w-1.5 h-1.5 rounded-full bg-[var(--color-tech)] animate-pulse"
             aria-hidden="true"
           />
-          esi · visão computacional
+          ESI · visão computacional
         </span>
 
         {/* Headline */}

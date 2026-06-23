@@ -30,7 +30,7 @@ export default function IAPage() {
       <PDIA />
       <CTA
         heading="Mande seu cenário."
-        sub="Devolvemos um diagnóstico técnico em até 1 dia útil."
+        sub="Devolvemos um diagnóstico técnico em até 10 dias útil."
       />
     </>
   );

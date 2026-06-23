@@ -61,9 +61,9 @@ export function AgroCTA() {
             className="text-sm leading-relaxed mb-6 opacity-80 space-y-1"
             style={{ fontFamily: "var(--font-agro-body), sans-serif" }}
           >
-            <p>Av. das Itaúbas &middot; Centro</p>{/* TODO: confirmar com cliente */}
+            <p>Av. das Caviunas 1612 &middot; Centro</p>
             <p>Atendimento: MT &middot; GO &middot; MS &middot; BA &middot; TO</p>
-            <p>(66) 0000-0000</p>{/* TODO: confirmar com cliente */}
+            <p></p>
           </div>
           <a
             href="#contato-agro"

@@ -14,7 +14,7 @@ export function AgroFooter() {
         className="text-xs opacity-60"
         style={{ fontFamily: "var(--font-agro-mono), monospace" }}
       >
-        &copy; Grupo ESI &middot; Filial Agro Sinop MT
+        ESI &middot; Filial Agro Sinop MT
       </span>
     </footer>
   );

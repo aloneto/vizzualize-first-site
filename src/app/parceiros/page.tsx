@@ -106,7 +106,7 @@ export default function ParceirosPage() {
             {[
               { number: "200+", label: "Parceiros" },
               { number: "50+", label: "Cidades" },
-              { number: "15+", label: "Estados" },
+              { number: "24+", label: "Estados" },
               { number: "98%", label: "Satisfação" },
             ].map(({ number, label }) => (
               <div key={label}>

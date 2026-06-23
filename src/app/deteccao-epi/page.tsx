@@ -39,7 +39,7 @@ const BENEFITS = [
     icon: "🔌",
     title: "Integração com câmeras existentes",
     description:
-      "Funciona com o seu parque de câmeras atual — CFTV analógico ou IP. Sem necessidade de trocar equipamentos.",
+      "Funciona com o seu parque de câmeras atual — CFTV analógico ou IP. Sem necessidade de trocar equipamentos.*",
   },
   {
     icon: "📊",
@@ -57,7 +57,7 @@ const BENEFITS = [
 
 const STATS = [
   { value: "<1s", label: "Tempo de detecção" },
-  { value: "99,2%", label: "Precisão média" },
+  { value: "92,2%", label: "Precisão média" },
   { value: "24/7", label: "Monitoramento contínuo" },
   { value: "0", label: "Hardware adicional" },
 ];
@@ -130,7 +130,7 @@ export default function DeteccaoEPIPage() {
               {
                 step: "01",
                 title: "Conectamos suas câmeras",
-                desc: "Integração com CFTV existente — IP ou analógico. Sem trocar equipamento, sem obra.",
+                desc: "Integração com CFTV existente — IP ou analógico. Sem trocar equipamento, sem obra.*",
               },
               {
                 step: "02",
@@ -253,13 +253,12 @@ export default function DeteccaoEPIPage() {
               </h2>
               <p className="text-[var(--color-gray-400)] text-lg mb-8 leading-relaxed">
                 Preencha o formulário e nossa equipe de engenharia entrará em
-                contato para agendar uma demonstração personalizada com imagens
-                da sua operação.
+                contato para agendar uma reuniao.
               </p>
 
               <div className="space-y-6 mt-10">
                 {[
-                  "Diagnóstico técnico em até 1 dia útil",
+                  "Diagnóstico técnico em até 5 dias útil",
                   "Demonstração com imagens do seu ambiente",
                   "Proposta sob medida para sua operação",
                 ].map((item) => (
