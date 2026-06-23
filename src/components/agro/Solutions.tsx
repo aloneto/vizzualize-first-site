@@ -1,7 +1,3 @@
-import { TotemSVG } from "./icons/TotemSVG";
-import { UMMSVG } from "./icons/UMMSVG";
-import { IADetectionSVG } from "./icons/IADetectionSVG";
-
 const solutions = [
   {
     id: "totem",
@@ -17,7 +13,6 @@ const solutions = [
     ],
     metric: "→ Instala em 1 dia · move quando precisar",
     gradient: "var(--color-agro-green-deep)",
-    Icon: TotemSVG,
   },
   {
     id: "umm",
@@ -33,7 +28,6 @@ const solutions = [
     ],
     metric: "→ Mobilizável em 24h pra qualquer fazenda do Brasil",
     gradient: "var(--color-agro-yellow)",
-    Icon: UMMSVG,
   },
   {
     id: "ia-agro",
@@ -49,7 +43,6 @@ const solutions = [
     ],
     metric: "→ Modelos treinados com vídeo real de fazenda no MT",
     gradient: "var(--color-agro-earth)",
-    Icon: IADetectionSVG,
   },
 ];
 
@@ -96,15 +89,14 @@ export function AgroSolutions() {
                 boxShadow: "0 2px 16px rgba(0,0,0,0.04)",
               }}
             >
-              {/* Visual */}
+              {/* Visual — imagens removidas até revisão do board */}
               <div
                 className="flex items-center justify-center p-8 min-h-[280px]"
                 style={{
                   background: `linear-gradient(135deg, ${s.gradient}, ${s.gradient}dd)`,
                 }}
-              >
-                <s.Icon className="w-48 h-auto opacity-90" />
-              </div>
+              />
+
 
               {/* Text */}
               <div className="p-8 flex flex-col justify-center">
